@@ -1,44 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <meta name="robots" content="noindex,follow">
+  <link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto%7CMerriweather%3A400%2C300&amp;ver=4.0-beta1" type="text/css" media="all">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" type="text/css" media="all">
+</head>
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-    </head>
-    <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
+<body class="home blog">
+  <div id="parallax-bg" style="top: 0px;"></div>
+  <div id="page" class="hfeed site">
+    <header id="masthead" class="site-header" role="banner">
+      <div class="header-wrap clearfix">
+        <div class="site-branding">
+          <h1 class="site-title"><a href="/" title="{{ site.name }}" rel="home">{{ site.name }}</a></h1>
+          <a href="https://www.surveymonkey.com/s/P5YTD2Q" target="_blank" style="float: left; margin-top: 26px; font-size: 18px;">Register online now!</a>
         </div>
 
-    </body>
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+          <div class="menu">
+            <ul class="social-menu">
+              <li><a href="http://www.facebook.com" target="_blank"><img src="/images/facebook.png"></a></li>
+              <li><a href="http://www.facebook.com" target="_blank"><img src="/images/facebook.png"></a></li>
+              <li><a href="http://www.facebook.com" target="_blank"><img src="/images/facebook.png"></a></li>
+            </ul>
+
+            <ul class="nav-menu">
+              <li class="current_page_item"><a href="#meet-us">Meet us</a></li>
+              <li class="page_item"><a href="#join-us">Join us</a></li>
+              <li class="page_item"><a href="#see-us">See us</a></li>
+              <li class="page_item"><a href="#invest">Invest</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="header-quote">
+        <h1>Speak with me and you’re my friend...<br/>sing with me and you’re my brother...</h1>
+      </div>
+    </header>
+
+    <div id="content" class="site-content">
+      {{ content }}
+    </div>
+
+    <footer id="colophon" class="site-footer" role="contentinfo">
+      <div class="site-info">
+        Proudly powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>
+        <span class="sep"> | </span>
+        Theme: based on Radiate by <a href="http://themegrill.com/" target="_blank">ThemeGrill</a>.
+      </div>
+    </footer>
+  </div>
+
+</body>
 </html>
