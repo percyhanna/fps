@@ -508,6 +508,7 @@ a:active {
   position: fixed;
   top: 0;
   width: 100%;
+  min-width: 1280px;
   margin: 0 auto;
   z-index: 999999;
   background-color: #FFFFFF;
@@ -522,6 +523,19 @@ body.admin-bar .header-wrap {
   font-family: 'Roboto';
   max-width: 100%;
   margin-right: 30px;
+}
+.site-branding img {
+  max-height: 60px;
+  float: left;
+  padding: 3px 0 0 3px;
+}
+.site-branding h1 {
+  font-family: Balthazar;
+  line-height: 1.5em;
+  margin-left: 0.3em;
+  float: left;
+  font-size: 42px;
+  color: #444;
 }
 .site-title {
   font-size: 36px;
@@ -1361,7 +1375,7 @@ object {
   background-repeat: repeat-x;
   background-position: center top;
   background-attachment: scroll;
-  background-size: 100%;
+  background-size: 100% 500px;
 }
 
 #masthead {
@@ -1382,6 +1396,10 @@ body.custom-background {
   background-color: #EAEAEA;
 }
 
+#masthead .nav-menu {
+  float: right;
+}
+
 .header-quote h1 {
   position: relative;
   top: 340px;
@@ -1390,24 +1408,44 @@ body.custom-background {
   text-align: right;
   right: 0;
   padding: 0 3em;
-  font-size: 32px;
+  font-size: 48px;
   line-height: 1.2em;
+  font-family: 'Alex Brush', cursive;
 }
 
-.social-menu {
-
+#masthead .social-menu {
+  float: right;
+  margin: 0.75em;
 }
 
 .social-menu li {
   border: none;
+  line-height: normal;
+  padding: 0 0.1em;
 }
 
 .social-menu a {
   padding: 0;
   vertical-align: middle;
+  border-radius: 30px;
 }
 
 .social-menu img {
-  max-height: 30px;
+  max-height: 40px;
   vertical-align: middle;
+}
+
+.social-menu .facebook:hover,
+.social-menu li:hover .facebook {
+  background-color: #3B5998;
+}
+
+.social-menu .twitter:hover,
+.social-menu li:hover .twitter {
+  background-color: #c0deed;
+}
+
+.social-menu .youtube:hover,
+.social-menu li:hover .youtube {
+  background-color: #cd201f;
 }
