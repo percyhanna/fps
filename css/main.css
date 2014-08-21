@@ -524,18 +524,14 @@ body.admin-bar .header-wrap {
   max-width: 100%;
   margin-right: 30px;
 }
-.site-branding img {
-  max-height: 60px;
-  float: left;
-  padding: 3px 0 0 3px;
-}
 .site-branding h1 {
   font-family: Balthazar;
   line-height: 1.5em;
-  margin-left: 0.3em;
   float: left;
   font-size: 42px;
   color: #444;
+  padding-left: 130px;
+  background: url(/images/logo-mountains-header.png) 5px 3px no-repeat;
 }
 .site-title {
   font-size: 36px;
@@ -819,7 +815,7 @@ img.header-image {
   background-color: #FFFFFF;
   padding: 30px 30px 20px;
   padding: 3rem 3rem 2rem;
-  min-height: 425px;
+  min-height: 450px;
 }
 #featured_pages .entry-title {
   line-height: 1;
