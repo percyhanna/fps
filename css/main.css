@@ -819,7 +819,7 @@ img.header-image {
   background-color: #FFFFFF;
   padding: 30px 30px 20px;
   padding: 3rem 3rem 2rem;
-  min-height: 400px;
+  min-height: 425px;
 }
 #featured_pages .entry-title {
   line-height: 1;
@@ -1411,6 +1411,7 @@ body.custom-background {
   font-size: 48px;
   line-height: 1.2em;
   font-family: 'Alex Brush', cursive;
+  text-shadow: #333 1px 1px 5px;
 }
 
 #masthead .social-menu {
