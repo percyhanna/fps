@@ -815,7 +815,7 @@ img.header-image {
   background-color: #FFFFFF;
   padding: 30px 30px 20px;
   padding: 3rem 3rem 2rem;
-  min-height: 450px;
+  min-height: 500px;
 }
 #featured_pages .entry-title {
   line-height: 1;
@@ -1367,7 +1367,7 @@ object {
 
 
 #parallax-bg {
-  background-image: url('/images/foothills-bw.jpg');
+  background-image: url('/images/foothills.jpg');
   background-repeat: repeat-x;
   background-position: center top;
   background-attachment: scroll;
