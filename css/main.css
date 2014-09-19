@@ -273,6 +273,10 @@ img {
   height: auto; /* Make sure images are scaled correctly. */
   max-width: 100%; /* Adhere to container width. */
 }
+img.right {
+  float: right;
+  margin-left: 1em;
+}
 /* For icon display hide of jetpack site stats */
 img#wpstats {
   display: none;
@@ -496,12 +500,15 @@ a:active {
   right: 0;
   bottom: 0;
   z-index: 1;
+  background-image: url('/images/foothills.jpg');
+  background-repeat: repeat-x;
+  background-position: center top;
+  background-attachment: scroll;
+  background-size: 100% 500px;
 }
 #page {
   position: relative;
   z-index: 888;
-}
-#masthead {
 }
 .header-wrap {  
   border-bottom: 1px solid #E1E4E6;
@@ -799,7 +806,13 @@ img.header-image {
   margin: 0 2.1893813% 30px 0;
   margin: 0 2.1893813% 3rem 0;
 }
-.tg-one-third-last, .tg-one-quarter-last {
+.tg-one-half {
+  float: left;
+  width: 48.9053093%;
+  margin: 0 2.1893814% 30px 0;
+  margin: 0 2.1893814% 3rem 0;
+}
+.tg-one-third-last, .tg-one-quarter-last, .tg-one-half-last {
   margin-right: 0;
 }
 #featured_pages {
@@ -812,10 +825,12 @@ img.header-image {
   margin-bottom: 2rem;
 }
 #featured_pages .page_text_container {
+  min-height: 500px;
+}
+.page_text_container {
   background-color: #FFFFFF;
   padding: 30px 30px 20px;
   padding: 3rem 3rem 2rem;
-  min-height: 500px;
 }
 #featured_pages .entry-title {
   line-height: 1;
@@ -1331,9 +1346,6 @@ object {
   .main-navigation ul {
     display: none;
   }
-  .site-branding {
-    max-width: 60%;
-  }
   .main-navigation {
     margin: 10px 25px 0 0;
     margin: 1rem 2.5rem 0 0;
@@ -1353,9 +1365,37 @@ object {
   .main-small-navigation ul ul {
     margin-left: 0;
   }
-  .tg-one-third {
+  #featured_pages .page_text_container {
+    min-height: initial;
+  }
+  .hide-mobile {
+    display: none;
+  }
+  .tg-one-third, .tg-one-quarter, .tg-one-half {
     width: 100%;
     float: none;
+  }
+  #parallax-bg {
+    background: none;
+  }
+  #masthead {
+    margin-bottom: 0 !important;
+  }
+  .header-wrap {
+    min-width: 100% !important;
+  }
+  .header-quote {
+    display: none;
+  }
+  .site-branding {
+    margin: 0 !important;
+  }
+  .site-branding h1 {
+    background-position: center 5px;
+    width: 100%;
+    line-height: 1.25em;
+    text-align: center;
+    padding: 1.5em 0 0 0;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1364,24 +1404,8 @@ object {
   }
 }
 
-
-
-#parallax-bg {
-  background-image: url('/images/foothills.jpg');
-  background-repeat: repeat-x;
-  background-position: center top;
-  background-attachment: scroll;
-  background-size: 100% 500px;
-}
-
 #masthead {
   margin-bottom: 380px;
-}
-
-@media only screen and (max-width: 600px) {
-  #masthead {
-    margin-bottom: 382px;
-  }
 }
 
 body.custom-background {
