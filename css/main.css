@@ -515,7 +515,6 @@ a:active {
   position: fixed;
   top: 0;
   width: 100%;
-  min-width: 1280px;
   margin: 0 auto;
   z-index: 999999;
   background-color: #FFFFFF;
@@ -526,10 +525,10 @@ body.admin-bar .header-wrap {
   top: 32px;
 }
 .site-branding {
+  position: fixed;
   float: left;
   font-family: 'Roboto';
-  max-width: 100%;
-  margin-right: 30px;
+  width: 100%;
 }
 .site-branding h1 {
   font-family: Balthazar;
@@ -1330,7 +1329,7 @@ object {
 }
 
 /* All Mobile Portrait size smaller than 768 (devices and browsers) */
-@media screen and (max-width: 768px) {  
+@media screen and (max-width: 768px) {
   #primary, #secondary {
     float: none;
     width: 100%;
@@ -1382,12 +1381,14 @@ object {
     margin-bottom: 0 !important;
   }
   .header-wrap {
+    position: relative;
     min-width: 100% !important;
   }
   .header-quote {
     display: none;
   }
   .site-branding {
+    position: static;
     margin: 0 !important;
   }
   .site-branding h1 {
@@ -1396,11 +1397,6 @@ object {
     line-height: 1.25em;
     text-align: center;
     padding: 1.5em 0 0 0;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .header-wrap {
-    position: relative;
   }
 }
 
