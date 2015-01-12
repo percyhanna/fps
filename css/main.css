@@ -1342,12 +1342,16 @@ object {
     display: block;
   }
 
-  .main-navigation ul {
-    display: none;
+  #page #masthead .social-menu {
+    width: 8.5em;
+    float: none !important;
+    margin: 0.75em auto;
   }
   .main-navigation {
+    width: 100%;
+    float: none;
     margin: 10px 25px 0 0;
-    margin: 1rem 2.5rem 0 0;
+    margin: 1rem 2.5rem 10px 0;
   }
   .site-header .menu-toggle {
     background-color: #FFFFFF;
@@ -1383,6 +1387,7 @@ object {
   .header-wrap {
     position: relative;
     min-width: 100% !important;
+    padding-bottom: 0.5em;
   }
   .header-quote {
     display: none;
@@ -1439,6 +1444,7 @@ body.custom-background {
   border: none;
   line-height: normal;
   padding: 0 0.1em;
+  width: 2.25em;
 }
 
 .social-menu a {
