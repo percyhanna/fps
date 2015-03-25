@@ -805,6 +805,12 @@ img.header-image {
   margin: 0 2.1893813% 30px 0;
   margin: 0 2.1893813% 3rem 0;
 }
+.tg-three-quarters {
+  float: left;
+  width: 74.4526546%;
+  margin: 0 2.1893813% 30px 0;
+  margin: 0 2.1893813% 3rem 0;
+}
 .tg-one-half {
   float: left;
   width: 48.9053093%;
@@ -824,7 +830,7 @@ img.header-image {
   margin-bottom: 2rem;
 }
 #featured_pages .page_text_container {
-  min-height: 500px;
+  min-height: 600px;
 }
 .page_text_container {
   background-color: #FFFFFF;
@@ -1471,4 +1477,8 @@ body.custom-background {
 .social-menu .youtube:hover,
 .social-menu li:hover .youtube {
   background-color: #cd201f;
+}
+
+.content-image {
+  text-align: center;
 }
