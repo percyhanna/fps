@@ -1,5 +1,6 @@
 name: Foothills Philharmonic Chorus
 markdown: redcarpet
 pygments: true
+url: http://www.foothillsphilharmonic.com
 gems:
   - jekyll-sitemap
