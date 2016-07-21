@@ -1474,6 +1474,11 @@ body.custom-background {
   background-color: #c0deed;
 }
 
+.social-menu .instagram:hover,
+.social-menu li:hover .instagram {
+  background-color: #d32b71;
+}
+
 .social-menu .youtube:hover,
 .social-menu li:hover .youtube {
   background-color: #cd201f;
