@@ -500,11 +500,11 @@ a:active {
   right: 0;
   bottom: 0;
   z-index: 1;
-  background-image: url('/images/foothills.jpg');
+  background-image: url('/images/foothills-smaller.jpg');
   background-repeat: repeat-x;
   background-position: center top;
   background-attachment: scroll;
-  background-size: 100% 500px;
+  background-size: 100% 400px;
 }
 #page {
   position: relative;
@@ -1412,7 +1412,7 @@ object {
 }
 
 #masthead {
-  margin-bottom: 380px;
+  margin-bottom: 280px;
 }
 
 body.custom-background {
@@ -1429,7 +1429,7 @@ body.custom-background {
 
 .header-quote h1 {
   position: relative;
-  top: 340px;
+  top: 240px;
   color: #fff;
   opacity: 0.9;
   text-align: right;
@@ -1486,4 +1486,9 @@ body.custom-background {
 
 .content-image {
   text-align: center;
+}
+
+.minor {
+  font-size: 90%;
+  color: #999;
 }
