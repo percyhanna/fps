@@ -1,4 +1,4 @@
 fpc
 ===
 
-Foothills Philharmonic Chorus Website
+Foothills Philharmonic Website
