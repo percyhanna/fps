@@ -8,6 +8,7 @@
   <meta name="description" content="Foothills Philharmonic - A Classical Choir in Okotoks, Alberta">
   <meta name="keywords" content="Okotoks choir, Alberta choir, foothills choir, high river choir, Okotoks arts, Alberta arts, foothills arts, choir, Okotoks concerts, Alberta concerts, high river concerts, foothills concerts, classical music, Okotoks classical music, Alberta classical music, foothills classical music, high river classical music, fpc, foothills philharmonic, foothills philharmonic chorus, foothills philharmonic society, Okotoks orchestra, Alberta orchestra, foothills orchestra, high river orchestra, Okotoks orchestras, Alberta orchestras">
   <link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
   <link href='//fonts.googleapis.com/css?family=Roboto|Alex+Brush' rel='stylesheet' type='text/css'>
   <script type="text/javascript">var _kmq = _kmq || [];
   var _kmk = _kmk || '449365614749a295221e9855187ad9ed492ede16';
@@ -24,7 +25,7 @@
   </script>
 </head>
 
-<body class="home blog">
+<body>
   <div id="parallax-bg" style="top: 0px;"></div>
 
   <header id="masthead" class="site-header" role="banner">
@@ -49,46 +50,45 @@
     </div>
   </header>
 
-  <div class="flex-container">
-    <aside id="sidebar-nav" class="flex-item">
-      <h3>Buy Tickets!</h3>
-      <ul>
-        <li><a href="/chorus.html">Join the FP Chorus</a></li>
-        <li><a href="/jazz-chorus.html">Join the FP Jazz Chorus</a></li>
-      </ul>
+  <div id="page">
+    <div class="row">
+      <div class="col-lg-3" id="sidebar-nav">
+        <h3>Buy Tickets!</h3>
+        <ul>
+          <li><a href="/chorus.html">Join the FP Chorus</a></li>
+          <li><a href="/jazz-chorus.html">Join the FP Jazz Chorus</a></li>
+        </ul>
 
-      <h3>Our groups</h3>
-      <ul>
-        <li><a href="/chorus.html">FP Chorus</a></li>
-        <li><a href="/jazz-chorus.html">FP Jazz Chorus</a></li>
-        <li><a href="/orchestra.html">FP Orchestra</a></li>
-      </ul>
+        <h3>Our groups</h3>
+        <ul>
+          <li><a href="/chorus.html">FP Chorus</a></li>
+          <li><a href="/jazz-chorus.html">FP Jazz Chorus</a></li>
+          <li><a href="/orchestra.html">FP Orchestra</a></li>
+        </ul>
 
-      <h3>Join Us!</h3>
-      <ul>
-        <li><a href="https://www.surveymonkey.com/r/J2Y2PZK" target="_blank">Join the FP Chorus</a></li>
-        <li><a href="https://www.surveymonkey.com/r/FQZ3MRF" target="_blank">Join the FP Jazz Chorus</a></li>
-        <li><a href="https://www.surveymonkey.com/r/W53P9ND" target="_blank">Join the FP Orchestra</a></li>
-      </ul>
+        <h3>Join Us!</h3>
+        <ul>
+          <li><a href="https://www.surveymonkey.com/r/J2Y2PZK" target="_blank">Join the FP Chorus</a></li>
+          <li><a href="https://www.surveymonkey.com/r/FQZ3MRF" target="_blank">Join the FP Jazz Chorus</a></li>
+          <li><a href="https://www.surveymonkey.com/r/W53P9ND" target="_blank">Join the FP Orchestra</a></li>
+        </ul>
 
-      <h3>Contact Us</h3>
-      <p><a href="mailto:info@foothillsphilharmonic.com">info@foothillsphilharmonic.com</a></p>
-    </aside>
-
-    <div class="flex-item">
-    <div id="content" class="site-content">
-      {{ content }}
-    </div>
-
-    <footer id="colophon" class="site-footer" role="contentinfo">
-      <div class="site-info">
-        Proudly powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>
-        <span class="sep"> | </span>
-        Theme: based on Radiate by <a href="http://themegrill.com/" target="_blank">ThemeGrill</a>.
+        <h3>Contact Us</h3>
+        <p><a href="mailto:info@foothillsphilharmonic.com">info@foothillsphilharmonic.com</a></p>
       </div>
-    </footer>
+      <div class="col-lg-9">
+        {{ content }}
+      </div>
     </div>
   </div>
+
+  <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+      Proudly powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>
+      <span class="sep"> | </span>
+      Design based on Radiate by <a href="http://themegrill.com/" target="_blank">ThemeGrill</a>.
+    </div>
+  </footer>
 
 </body>
 </html>
