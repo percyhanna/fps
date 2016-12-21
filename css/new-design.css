@@ -1,0 +1,255 @@
+/*
+Theme Name: Radiate
+Theme URI: http://themegrill.com/themes/radiate/
+Author: ThemeGrill
+Author URI: http://themegrill.com/
+Description: Radiate is a clean, creative and light retina ready responsive blogging theme supporting parallax header image. It integrates primary color option, custom background, custom css and few other features through WordPress customizer. The theme is translation ready and you can get free support on http://themegrill.com/support-forum. View demo at http://demo.themegrill.com/radiate. Available Translations -> French, German and Russian.
+Version: 1.0.6
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: radiate
+Domain Path: /languages/
+Tags: light, white, two-columns, right-sidebar, responsive-layout, custom-header, custom-background, custom-menu, custom-colors, post-formats, sticky-post, threaded-comments, translation-ready
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+html {
+  font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+  background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 15px;
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+th {
+   font-weight: bold;
+}
+th, td {
+   border: 1px solid #EAEAEA;
+   padding: 6px 10px;
+}
+caption, th, td {
+  text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+blockquote, q {
+  quotes: "" "";
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+  outline: 0;
+}
+a img {
+  border: 0;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Georgia, serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #444444;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:  'Roboto', sans-serif;
+}
+h1 { font-size: 30px; line-height: 36px; }
+h2 { font-size: 28px; line-height: 34px; }
+h3 { font-size: 26px; line-height: 32px; }
+h4 { font-size: 24px; line-height: 30px; }
+h5 { font-size: 22px; line-height: 28px; }
+h6 { font-size: 19px; line-height: 25px; }
+
+body {
+  background-color: #eee;
+}
+
+#banner {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-image: url(/images/foothills-header.jpg);
+}
+
+#logo {
+  height: 160px;
+  width: 222px;
+  text-indent: -9999px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-image: url(/images/fpc-logo.png);
+}
+
+#nav {
+  position: absolute;
+  top: 80px;
+  right: 50px;
+}
+
+#nav ul {
+  list-style: none;
+}
+
+#nav ul li {
+  /*display: inline-block;*/
+  float: left;
+}
+
+#nav ul li a {
+  color: #333;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 12px 15px 8px;
+  margin: 0;
+  border-left: solid 1px rgba(255, 255, 255, 0.75);
+  /*margin: 0 5px 0 0;*/
+}
+
+#nav ul li a:hover {
+  background-color: #4b57a6 /*rgba(255, 255, 255, 0.8)*/;
+  color: #fff;
+}
+
+#nav ul li:first-child a {
+  border-radius: 5px 0 0 5px;
+  border: none;
+}
+
+#nav ul li:last-child a {
+  border-radius: 0 5px 5px 0;
+}
+
+.content-box {
+  padding: 20px 15px;
+  margin: 15px;
+  background: #fff;
+}
+
+.row > div:first-child .content-box {
+  margin-right: 0;
+}
+
+#social-menu {
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+}
+
+#social-menu ul {
+  list-style: none;
+}
+
+#social-menu li {
+  border: none;
+  line-height: normal;
+  display: inline-block;
+  padding: 0 0.1em;
+  width: 40px;
+  height: 40px;
+}
+
+#social-menu a {
+  padding: 0;
+  display: block;
+  font-size: 18px;
+  vertical-align: middle;
+  border-radius: 30px;
+}
+
+#social-menu img {
+  max-height: 40px;
+  width: auto;
+  vertical-align: middle;
+}
+
+#social-menu .facebook:hover,
+#social-menu li:hover .facebook {
+  background-color: #3B5998;
+}
+
+#social-menu .twitter:hover,
+#social-menu li:hover .twitter {
+  background-color: #c0deed;
+}
+
+#social-menu .instagram:hover,
+#social-menu li:hover .instagram {
+  background-color: #d32b71;
+}
+
+#social-menu .youtube:hover,
+#social-menu li:hover .youtube {
+  background-color: #cd201f;
+}

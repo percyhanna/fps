@@ -1496,28 +1496,7 @@ body.custom-background {
   padding: 20px;
 }
 
-.content-box {
-  position: relative;
-  padding: 15px;
-  margin: 15px 0 0 15px;
-}
-
 .content-box-bg {
-  background: #fff;
-}
-
-.content-bg {
-  position: relative;
-}
-
-.content-bg:before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  z-index: -1;
   background: #fff;
 }
 
