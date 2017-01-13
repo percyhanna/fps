@@ -97,7 +97,16 @@ a:active { /* Improves readability when focused and also mouse hovered in all br
 a img {
   border: 0;
 }
-
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+p {
+  margin-bottom: 9px;
+  line-height: 1.7em;
+}
 
 /* =Global
 ----------------------------------------------- */
@@ -120,15 +129,20 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   font-family:  'Roboto', sans-serif;
 }
-h1 { font-size: 30px; line-height: 36px; }
-h2 { font-size: 28px; line-height: 34px; }
-h3 { font-size: 26px; line-height: 32px; }
-h4 { font-size: 24px; line-height: 30px; }
-h5 { font-size: 22px; line-height: 28px; }
-h6 { font-size: 19px; line-height: 25px; }
+h1 { font-size: 30px; line-height: 36px; color: #339c5e; }
+h2 { font-size: 28px; line-height: 34px; color: #339c5e; }
+h3 { font-size: 26px; line-height: 32px; color: #339c5e; }
+h4 { font-size: 24px; line-height: 30px; color: #339c5e; }
+h5 { font-size: 22px; line-height: 28px; color: #339c5e; }
+h6 { font-size: 19px; line-height: 25px; color: #339c5e; }
+
+a {
+  color: #4b57a6;
+  text-decoration: none;
+}
 
 body {
-  background-color: #eee;
+  background-color: #e0e0e0;
 }
 
 #banner {
@@ -192,9 +206,15 @@ body {
 }
 
 .content-box {
-  padding: 20px 15px;
+  padding: 15px;
   margin: 15px;
   background: #fff;
+}
+
+.content-box > h1 {
+  margin: -15px -15px 10px;
+  padding: 10px 15px;
+  border-bottom: solid 8px #ddd;
 }
 
 .row > div:first-child .content-box {
@@ -252,4 +272,18 @@ body {
 #social-menu .youtube:hover,
 #social-menu li:hover .youtube {
   background-color: #cd201f;
+}
+
+.content-inner {
+  padding-left: 15px;
+}
+
+.link-button {
+  margin-top: 26px;
+  background-color: #339c5e;
+  color: #fff;
+  padding: 0.5em 0.75em;
+  margin: 12px auto 0;
+  display: inline-block;
+  font-size: 20px;
 }
