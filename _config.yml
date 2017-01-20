@@ -3,3 +3,11 @@ markdown: redcarpet
 url: http://www.foothillsphilharmonic.com
 gems:
   - jekyll-sitemap
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      description: "Foothills Philharmonic - A Classical Choir in Okotoks, Alberta"
