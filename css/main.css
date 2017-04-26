@@ -1415,6 +1415,10 @@ object {
   margin-bottom: 280px;
 }
 
+#masthead.no-banner {
+  margin-bottom: 50px;
+}
+
 body.custom-background {
   background: none !important;
 }
