@@ -1,4 +1,4 @@
-fpc
+Foothills Philharmonic
 ===
 
-Foothills Philharmonic Website
+The website for the Foothills Philharmonic.
