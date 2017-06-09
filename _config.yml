@@ -1,4 +1,4 @@
-name: Foothills Philharmonic
+name: Foothills Philharmonic Society
 markdown: redcarpet
 url: http://www.foothillsphilharmonic.com
 gems:
@@ -10,4 +10,4 @@ defaults:
       path: ""
       type: "pages"
     values:
-      description: "Foothills Philharmonic - Bringing beautiful music to the Foothills in Southern Alberta, Canada"
+      description: "Foothills Philharmonic Society - Bringing beautiful music to the Foothills in Southern Alberta, Canada"
