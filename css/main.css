@@ -1433,16 +1433,15 @@ body.custom-background {
 
 .header-quote h1 {
   position: relative;
-  top: 240px;
+  top: 120px;
   color: #fff;
   opacity: 0.9;
-  text-align: right;
   right: 0;
   padding: 0 3em;
   font-size: 48px;
   line-height: 1.2em;
   font-family: 'Alex Brush', cursive;
-  text-shadow: #333 1px 1px 5px;
+  text-shadow: #000 1px 1px 7px;
 }
 
 #masthead .social-menu {
