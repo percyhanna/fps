@@ -130,7 +130,7 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family:  'Roboto', sans-serif;
+  font-family:  'Josefin Sans', sans-serif;
 }
 h1 { font-size: 30px; line-height: 36px; }
 h2 { font-size: 28px; line-height: 34px; }
@@ -527,12 +527,14 @@ body.admin-bar .header-wrap {
 .site-branding {
   position: fixed;
   float: left;
-  font-family: 'Roboto';
+  font-family: 'Josefin Sans';
   width: 100%;
 }
 .site-branding h1 {
-  font-family: Balthazar;
-  line-height: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.75em;
+  /*text-transform: uppercase;*/
+  font-variant: small-caps;
   float: left;
   font-size: 42px;
   color: #444;
@@ -606,7 +608,7 @@ img.header-image {
   padding-left: 0;
 }
 .main-navigation li {
-  font-family: 'Roboto';
+  font-family: 'Josefin Sans';
   float: left;
   position: relative;
   font-size: 18px;
@@ -615,7 +617,7 @@ img.header-image {
   border-left: 1px solid #E1E4E6;
 }
 .main-navigation a {
-  font-family: 'Roboto';
+  font-family: 'Josefin Sans';
   padding: 0 25px;
   display: block;
   text-decoration: none;
@@ -1176,7 +1178,7 @@ object {
   background-color: #FFFFFF;
 }
 .widget-title {
-  font-family: 'Roboto';
+  font-family: 'Josefin Sans';
   font-size: 25px;
   font-size: 2.5rem;
   margin-bottom: 15px;
