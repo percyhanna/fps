@@ -1,113 +1,3 @@
-/*
-Theme Name: Radiate
-Theme URI: http://themegrill.com/themes/radiate/
-Author: ThemeGrill
-Author URI: http://themegrill.com/
-Description: Radiate is a clean, creative and light retina ready responsive blogging theme supporting parallax header image. It integrates primary color option, custom background, custom css and few other features through WordPress customizer. The theme is translation ready and you can get free support on http://themegrill.com/support-forum. View demo at http://demo.themegrill.com/radiate. Available Translations -> French, German and Russian.
-Version: 1.0.6
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: radiate
-Domain Path: /languages/
-Tags: light, white, two-columns, right-sidebar, responsive-layout, custom-header, custom-background, custom-menu, custom-colors, post-formats, sticky-post, threaded-comments, translation-ready
-
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-and Blueprint http://www.blueprintcss.org/
-*/
-
-
-/* =Reset
--------------------------------------------------------------- */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  font-style: inherit;
-  font-weight: inherit;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  vertical-align: baseline;
-}
-html {
-  font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
-  overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
-  -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
-  -ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
-}
-body {
-  background: #fff;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-nav,
-section {
-  display: block;
-}
-ol, ul {
-  list-style: none;
-}
-table { /* tables still need 'cellspacing="0"' in the markup */
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin: 0 0 15px;
-  margin: 0 0 1.5em;
-  width: 100%;
-}
-th {
-   font-weight: bold;
-}
-th, td {
-   border: 1px solid #EAEAEA;
-   padding: 6px 10px;
-}
-caption, th, td {
-  text-align: left;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-}
-blockquote, q {
-  quotes: "" "";
-}
-a:focus {
-  outline: thin dotted;
-}
-a:hover,
-a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
-  outline: 0;
-}
-a img {
-  border: 0;
-}
-strong {
-  font-weight: bold;
-}
-em {
-  font-style: italic;
-}
-p {
-  margin-bottom: 9px;
-  line-height: 1.7em;
-}
-
 /* =Global
 ----------------------------------------------- */
 
@@ -119,26 +9,32 @@ textarea {
   font-family: Georgia, serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.5;
   color: #444444;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   font-family:  'Roboto', sans-serif;
+  line-height: 1.5em;
+  color: #339c5e;
+  margin-bottom: 0.5em;
 }
-h1 { font-size: 30px; line-height: 36px; color: #339c5e; }
-h2 { font-size: 28px; line-height: 34px; color: #339c5e; }
-h3 { font-size: 26px; line-height: 32px; color: #339c5e; }
-h4 { font-size: 24px; line-height: 30px; color: #339c5e; }
-h5 { font-size: 22px; line-height: 28px; color: #339c5e; }
-h6 { font-size: 19px; line-height: 25px; color: #339c5e; }
+h1 { font-size: 30px; }
+h2 { font-size: 20px; }
+h3 { font-size: 26px; }
+h4 { font-size: 24px; }
+h5 { font-size: 22px; }
+h6 { font-size: 19px; }
 
 a {
   color: #4b57a6;
   text-decoration: none;
+}
+
+address {
+  border: solid 1px #ccc;
+  background: #eee;
+  padding: 0.7em;
+  font-family: 'Courier New', monospace;
 }
 
 body {
@@ -151,6 +47,7 @@ body {
   height: 100px;
   width: 100%;
   background-color: rgba(32, 32, 32, 0.5);
+  z-index: 100;
 }
 
 #logo {
@@ -178,6 +75,8 @@ body {
 
 #nav ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 #nav ul li {
@@ -214,7 +113,6 @@ body {
   background: rgba(32, 32, 32, 0.75);
   position: absolute;
   top: 100%;
-  width: 100%;
 }
 
 #nav ul ul li {
@@ -304,18 +202,4 @@ body {
 #social-menu .youtube:hover,
 #social-menu li:hover .youtube {
   background-color: #cd201f;
-}
-
-.content-inner {
-  padding-left: 15px;
-}
-
-.link-button {
-  margin-top: 26px;
-  background-color: #339c5e;
-  color: #fff;
-  padding: 0.5em 0.75em;
-  margin: 12px auto 0;
-  display: inline-block;
-  font-size: 20px;
 }
