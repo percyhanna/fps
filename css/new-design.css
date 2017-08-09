@@ -1,0 +1,299 @@
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Georgia, serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #444444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, sans-serif;
+  line-height: 1.5em;
+  color: #339c5e;
+  margin-bottom: 0.5em;
+}
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3 { font-size: 22px; }
+h4 { font-size: 20px; }
+h5 { font-size: 19px; }
+h6 { font-size: 18px; }
+
+a, a:hover, a:focus {
+  color: #4b57a6;
+  text-decoration: none;
+}
+
+strong { font-weight: bold; }
+
+address {
+  border: solid 1px #ccc;
+  background: #eee;
+  padding: 0.7em;
+  font-family: 'Courier New', monospace;
+}
+
+body {
+  background-color: #333;
+}
+
+#banner {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+}
+
+#page {
+  background: #e0e0e0;
+}
+
+#page > .container {
+  background: #fff;
+  padding-top: 75px;
+  padding-bottom: 15px;
+}
+
+#page > .container > .row {
+  margin-bottom: 20px;
+}
+
+footer {
+  font-family: Roboto;
+  color: #eee;
+  padding-top: 2em;
+}
+
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer a {
+  color: #eee;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+  height: 60px;
+  text-indent: -9999px;
+  background-size: contain;
+  background-image: url(/images/logo-small.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#nav {
+  float: right;
+  margin-top: 5px;
+}
+
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav ul li {
+  position: relative;
+  float: left;
+}
+
+#nav a {
+  display: block;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 5px 2px;
+  margin: 0;
+  cursor: pointer;
+}
+
+#nav ul li a:hover, #nav ul li:hover > a {
+  background-color: rgba(51, 156, 94, 0.5);
+  color: #fff;
+  text-shadow: 1px 1px 1px black;
+}
+
+#nav ul li:first-child a,
+#nav ul li.hidden-sm-up + li a {
+  border: none;
+}
+
+#nav ul ul {
+  display: none;
+  background: rgba(32, 32, 32, 0.75);
+  position: absolute;
+  top: 100%;
+  width: 150%;
+}
+
+#nav ul ul li {
+  float: none;
+}
+
+#nav ul ul a {
+  color: #ccc;
+  display: block;
+  text-transform: none;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  padding: 4px 6px;
+  margin: 0;
+  border: none;
+}
+
+#nav ul li:hover ul {
+  display: block;
+}
+
+#page h1 {
+  border-bottom: solid 1px #ddd;
+}
+
+#page .carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(32, 32, 32, 0.6);
+  text-shadow: 1px 1px 2px black;
+}
+
+#page .carousel-caption a {
+  color: #fff;
+}
+
+.content-image {
+  text-align: center;
+}
+
+.content-image img {
+  max-width: 100%;
+}
+
+#social-menu {
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+}
+
+#social-menu ul {
+  list-style: none;
+}
+
+#social-menu li {
+  border: none;
+  line-height: normal;
+  display: inline-block;
+  padding: 0 0.1em;
+  width: 40px;
+  height: 40px;
+}
+
+#social-menu a {
+  padding: 0;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+#social-menu img {
+  max-height: 40px;
+  width: auto;
+  vertical-align: middle;
+}
+
+#social-menu .facebook:hover,
+#social-menu li:hover .facebook {
+  background-color: #3B5998;
+}
+
+#social-menu .twitter:hover,
+#social-menu li:hover .twitter {
+  background-color: #c0deed;
+}
+
+#social-menu .instagram:hover,
+#social-menu li:hover .instagram {
+  background-color: #d32b71;
+}
+
+#social-menu .youtube:hover,
+#social-menu li:hover .youtube {
+  background-color: #cd201f;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi) and (min-width: 768px) {
+  #logo {
+    background-image: url(/images/logo-website-top@2x.png);
+  }
+}
+
+@media (min-width: 576px) {
+  #logo {
+    background-size: auto 50%;
+  }
+
+  #nav {
+    margin-top: 17px;
+  }
+
+  #nav a {
+    border-left: solid 1px rgba(255, 255, 255, 0.75);
+  }
+}
+
+@media (min-width: 768px) {
+  #logo {
+    background-size: auto 85%;
+    background-image: url(/images/logo-website-top.png);
+  }
+
+  #nav a {
+    padding: 3px 12px;
+    border-left: solid 1px rgba(255, 255, 255, 0.75);
+  }
+}
+
+@media (min-width: 992px) {
+  #banner {
+    height: 100px;
+  }
+
+  #page > .container {
+    padding-top: 115px;
+  }
+
+  #logo {
+    height: 100px;
+    width: 404px;
+    max-width: 100%;
+    background-size: 100%;
+    background-image: url(/images/logo-website-top.png);
+  }
+
+  #nav {
+    margin-top: 30px;
+  }
+
+  #nav a {
+    font-size: 18px;
+    padding: 6px 15px 4px;
+  }
+
+  #nav ul ul a {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
