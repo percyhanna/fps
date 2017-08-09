@@ -30,6 +30,8 @@ a {
   text-decoration: none;
 }
 
+strong { font-weight: bold; }
+
 address {
   border: solid 1px #ccc;
   background: #eee;
@@ -51,9 +53,17 @@ body {
 }
 
 #page {
-  padding-top: 110px;
   background: #e0e0e0;
+}
+
+#page > .container {
+  background: #fff;
+  padding-top: 115px;
   padding-bottom: 15px;
+}
+
+#page > .container > .row {
+  margin-bottom: 20px;
 }
 
 footer {
@@ -89,8 +99,8 @@ footer a {
 
 #nav {
   position: absolute;
-  top: 30px;
-  right: 40px;
+  top: 33px;
+  right: 15px;
 }
 
 #nav ul {
@@ -107,13 +117,12 @@ footer a {
 #nav a {
   display: block;
   color: #fff;
-  text-transform: uppercase;
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: 0.1em;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-  padding: 9px 18px 5px;
+  padding: 4px 18px 2px;
   margin: 0;
   border-left: solid 1px rgba(255, 255, 255, 0.75);
   cursor: pointer;
@@ -133,6 +142,7 @@ footer a {
   background: rgba(32, 32, 32, 0.75);
   position: absolute;
   top: 100%;
+  width: 150%;
 }
 
 #nav ul ul li {
@@ -155,21 +165,8 @@ footer a {
   display: block;
 }
 
-.content-box {
-  padding: 15px;
-  margin-top: 20px;
-  background: #fff;
-}
-
-.content-box > h1 {
-  margin: -15px -15px 10px;
-  padding: 10px 15px;
+#page h1 {
   border-bottom: solid 1px #ddd;
-  background-color: #f3f3f3;
-}
-
-.row > div:first-child .content-box {
-  margin-right: 0;
 }
 
 #page .carousel-item {
