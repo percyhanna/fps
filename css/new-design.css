@@ -131,6 +131,7 @@ footer a {
 #nav ul li a:hover, #nav ul li:hover > a {
   background-color: rgba(51, 156, 94, 0.5);
   color: #fff;
+  text-shadow: 1px 1px 1px black;
 }
 
 #nav ul li:first-child a {
