@@ -179,6 +179,10 @@ footer a {
   text-align: center;
 }
 
+.content-image img {
+  max-width: 100%;
+}
+
 #social-menu {
   margin: 0 auto;
   padding: 0;
