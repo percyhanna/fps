@@ -127,7 +127,8 @@ footer a {
   text-shadow: 1px 1px 1px black;
 }
 
-#nav ul li:first-child a {
+#nav ul li:first-child a,
+#nav ul li.hidden-sm-up + li a {
   border: none;
 }
 
