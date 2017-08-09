@@ -185,6 +185,10 @@ footer a {
   color: #fff;
 }
 
+.content-image {
+  text-align: center;
+}
+
 #social-menu {
   margin: 0 auto;
   padding: 0;
