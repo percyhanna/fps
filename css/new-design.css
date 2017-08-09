@@ -19,13 +19,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 }
 h1 { font-size: 30px; }
-h2 { font-size: 20px; }
-h3 { font-size: 26px; }
-h4 { font-size: 24px; }
-h5 { font-size: 22px; }
-h6 { font-size: 19px; }
+h2 { font-size: 24px; }
+h3 { font-size: 22px; }
+h4 { font-size: 20px; }
+h5 { font-size: 19px; }
+h6 { font-size: 18px; }
 
-a {
+a, a:hover, a:focus {
   color: #4b57a6;
   text-decoration: none;
 }
@@ -163,10 +163,6 @@ footer a {
   border-bottom: solid 1px #ddd;
 }
 
-#page .carousel-item {
-  min-height: 400px
-}
-
 #page .carousel-caption {
   left: 0;
   right: 0;
@@ -175,7 +171,7 @@ footer a {
   text-shadow: 1px 1px 2px black;
 }
 
-#page .carousel-caption h3 {
+#page .carousel-caption a {
   color: #fff;
 }
 
