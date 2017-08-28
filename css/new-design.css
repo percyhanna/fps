@@ -297,3 +297,19 @@ footer a {
     font-size: 16px;
   }
 }
+
+.button-cta {
+  margin-top: 26px;
+  background-color: #339c5e;
+  color: #fff;
+  padding: 0.5em 0.75em;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.button-cta.small {
+  font-size: 16px;
+  padding: 0.4em 0.5em;
+  margin: 0.25em auto;
+}
