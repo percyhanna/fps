@@ -11,3 +11,6 @@ defaults:
       type: "pages"
     values:
       description: "Foothills Philharmonic Society - Bringing beautiful music to the Foothills in Southern Alberta, Canada"
+
+plugins_dir:
+  - jekyll-redirect-from
