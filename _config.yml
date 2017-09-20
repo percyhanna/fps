@@ -1,8 +1,6 @@
 name: Foothills Philharmonic Society
 markdown: redcarpet
 url: http://www.foothillsphilharmonic.com
-gems:
-  - jekyll-sitemap
 
 defaults:
   -
@@ -12,5 +10,6 @@ defaults:
     values:
       description: "Foothills Philharmonic Society - Bringing beautiful music to the Foothills in Southern Alberta, Canada"
 
-plugins_dir:
+plugins:
   - jekyll-redirect-from
+  - jekyll-sitemap

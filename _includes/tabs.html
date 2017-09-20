@@ -1,0 +1,8 @@
+<div class="tab-container">
+  <ul class="tabs">
+    <li class="heading"><h1>{{ page.title }}</h1></li>
+    {% for tab in include.tabs.tabs %}
+      <li class="tab {% if tab[0] == page.permalink %}active_tab{% endif %}"><a href="{{ tab[0] }}">{{ tab[1] }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

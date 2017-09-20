@@ -313,3 +313,41 @@ footer a {
   padding: 0.4em 0.5em;
   margin: 0.25em auto;
 }
+
+.tabs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.tabs li {
+  display: inline-block;
+  border-bottom: solid 1px #ddd;
+}
+
+li.heading {
+  flex: 1;
+}
+
+#page li.heading h1 {
+  border: none;
+  margin: 0;
+}
+
+li.tab {
+  flex: 0;
+  padding: 9px 12px;
+  padding-bottom: 0;
+  white-space: nowrap;
+  line-height: 1.75;
+}
+
+li.active_tab {
+  background-color: #999;
+  border-bottom-width: 3px;
+  border-bottom-color: #4b57a6;
+}
+
+li.active_tab a {
+  color: white;
+}
