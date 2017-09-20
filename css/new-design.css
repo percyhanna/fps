@@ -18,6 +18,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #339c5e;
   margin-bottom: 0.5em;
 }
+
+
+h1.tight,
+h2.tight,
+h3.tight,
+h4.tight,
+h5.tight,
+h6.tight {
+  margin-bottom: 0;
+}
+
 h1 { font-size: 30px; }
 h2 { font-size: 24px; }
 h3 { font-size: 22px; }
