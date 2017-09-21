@@ -1,8 +1,25 @@
-<div class="tab-container">
+<div class="tab-container hidden-md-down">
   <ul class="tabs">
-    <li class="heading"><h1>{{ page.title }}</h1></li>
+    <li class="stretch"><h1>{{ page.title }}</h1></li>
     {% for tab in include.tabs.tabs %}
       <li class="tab {% if tab[0] == page.permalink %}active_tab{% endif %}"><a href="{{ tab[0] }}">{{ tab[1] }}</a></li>
     {% endfor %}
   </ul>
+</div>
+
+<div class="container wrapped-tab-container hidden-lg-up">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <h1>{{ page.title }}</h1>
+    </div>
+
+    <div class="col-12">
+      <ul class="tabs">
+        {% for tab in include.tabs.tabs %}
+          <li class="tab {% if tab[0] == page.permalink %}active_tab{% endif %}"><a href="{{ tab[0] }}">{{ tab[1] }}</a></li>
+        {% endfor %}
+        <li class="stretch"></li>
+      </ul>
+    </div>
+  </div>
 </div>

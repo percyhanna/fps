@@ -19,14 +19,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 }
 
-
-h1.tight,
-h2.tight,
-h3.tight,
-h4.tight,
-h5.tight,
-h6.tight {
+h1.tight, h2.tight, h3.tight, h4.tight, h5.tight, h6.tight,
+#page .tabs h1, #page .tabs h2, #page .tabs h3, #page .tabs h4, #page .tabs h5, #page .tabs h6 {
   margin-bottom: 0;
+}
+
+#page .tabs h1 {
+  border-bottom: none;
 }
 
 h1 { font-size: 30px; }
@@ -364,10 +363,15 @@ footer a {
   margin: 0.25em auto;
 }
 
+.wrapped-tab-container {
+  padding: 0;
+}
+
 .tabs {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: flex-end;
 }
 
 .tabs li {
@@ -375,7 +379,7 @@ footer a {
   border-bottom: solid 1px #ddd;
 }
 
-li.heading {
+li.stretch {
   flex: 1;
 }
 
@@ -386,8 +390,7 @@ li.heading {
 
 li.tab {
   flex: 0;
-  padding: 9px 12px;
-  padding-bottom: 0;
+  padding: 6px 12px 3px;
   white-space: nowrap;
   line-height: 1.75;
 }
@@ -400,4 +403,12 @@ li.active_tab {
 
 li.active_tab a {
   color: white;
+}
+
+.float-left {
+  float: left;
+}
+
+img.float-left {
+  margin-right: 1em;
 }
