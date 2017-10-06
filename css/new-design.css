@@ -222,7 +222,7 @@ footer a {
 }
 
 #social-menu {
-  margin: 0 auto;
+  margin: 0 0 1em;
   padding: 0;
   display: inline-block;
 }
