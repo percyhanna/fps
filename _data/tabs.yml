@@ -4,3 +4,8 @@ chorus:
     '/chorus/': Chorus
     '/chorus/musical-director': Musical Director
     '/chorus/resources': Resources
+jazz:
+  name: Foothills Philharmonic Vocal Jazz
+  tabs:
+    '/vocal-jazz/': Vocal Jazz
+    '/vocal-jazz/musical-director': Musical Director
