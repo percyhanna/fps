@@ -70,6 +70,11 @@ body {
   background: #fff;
   padding-top: 75px;
   padding-bottom: 15px;
+  min-height: 800px;
+}
+
+.page-home #page > .container {
+  min-height: initial;
 }
 
 #page .container .row + .row {
