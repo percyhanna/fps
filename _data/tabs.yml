@@ -9,3 +9,8 @@ jazz:
   tabs:
     '/vocal-jazz/': Vocal Jazz
     '/vocal-jazz/musical-director': Musical Director
+orchestra:
+  name: Foothills Philharmonic Orchestra
+  tabs:
+    '/orchestra/': Orchestra
+    '/orchestra/musical-director': Musical Director
