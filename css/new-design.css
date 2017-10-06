@@ -72,8 +72,8 @@ body {
   padding-bottom: 15px;
 }
 
-#page > .container > .row {
-  margin-bottom: 20px;
+#page .container .row + .row {
+  margin-top: 20px;
 }
 
 footer {
@@ -407,4 +407,14 @@ li.active_tab a {
 
 img.float-left {
   margin-right: 1em;
+}
+
+#slogan {
+  text-align: center;
+}
+
+#slogan h1 {
+  margin: 0;
+  border: none;
+  font-family: 'Josefin Sans', sans-serif;
 }
