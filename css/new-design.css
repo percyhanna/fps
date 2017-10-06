@@ -418,3 +418,8 @@ img.float-left {
   border: none;
   font-family: 'Josefin Sans', sans-serif;
 }
+
+.sponsor-image {
+  text-align: center;
+  padding: 1em 0;
+}
