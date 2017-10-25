@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <title>{{ page.title }}</title>
+
+  <!-- facebook open graph tags -->
   <meta name="og:url" content="{{ page.url | absolute_url }}">
   <meta name="og:title" content="{{ page.title }}">
   {% if page.excerpt -%}
@@ -12,6 +14,19 @@
   <meta name="og:description" content="{{ page.description }}">
   {% endif -%}
   <meta name="og:image" content="{{ page.image | absolute_url }}">
+
+  <!-- twitter card tags additive with the og: tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:domain" content="foothillsphilharmonic.com">
+  <meta name="twitter:title" value="{{ page.title }}" />
+  {% if page.excerpt -%}
+  <meta name="twitter:description" content="{{ page.excerpt | strip_html | lstrip | rstrip | escape_once }}">
+  {% else -%}
+  <meta name="twitter:description" content="{{ page.description }}">
+  {% endif -%}
+  <meta name="twitter:image" content="{{ page.image | absolute_url }}">
+  <meta name="twitter:url" content="{{ page.url | absolute_url }}">
+
   <meta name="robots" content="index,follow">
   <meta name="description" content="{{ page.description }}">
   <meta name="keywords" content="Okotoks choir, Alberta choir, foothills choir, high river choir, Okotoks arts, Alberta arts, foothills arts, choir, Okotoks concerts, Alberta concerts, high river concerts, foothills concerts, classical music, Okotoks classical music, Alberta classical music, foothills classical music, high river classical music, fpc, foothills philharmonic, foothills philharmonic chorus, foothills philharmonic society, Okotoks orchestra, Alberta orchestra, foothills orchestra, high river orchestra, Okotoks orchestras, Alberta orchestras">
