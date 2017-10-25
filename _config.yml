@@ -7,9 +7,9 @@ defaults:
   -
     scope:
       path: ""
-      type: "pages"
     values:
       description: "Foothills Philharmonic Society - Bringing beautiful music to the Foothills in Southern Alberta, Canada"
+      image: "/images/default-fps-image.jpg"
 
 plugins:
   - jekyll-redirect-from
