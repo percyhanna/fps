@@ -1,6 +1,7 @@
 name: Foothills Philharmonic Society
 markdown: redcarpet
 url: http://www.foothillsphilharmonic.com
+future: true
 
 defaults:
   -
