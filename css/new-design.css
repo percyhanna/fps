@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 }
 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #339c5e;
+}
+
 h1.tight, h2.tight, h3.tight, h4.tight, h5.tight, h6.tight,
 #page .tabs h1, #page .tabs h2, #page .tabs h3, #page .tabs h4, #page .tabs h5, #page .tabs h6 {
   margin-bottom: 0;
