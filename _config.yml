@@ -3,6 +3,7 @@ markdown: redcarpet
 url: http://www.foothillsphilharmonic.com
 permalink: /:categories/:year/:month/:day/:title
 post_dirs: true
+excerpt_separator: <!--more-->
 
 defaults:
   -
