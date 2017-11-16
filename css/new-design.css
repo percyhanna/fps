@@ -506,3 +506,12 @@ aside.box {
   padding: 8px 12px;
   text-align: center;
 }
+
+.link-button {
+  background-color: #339c5e;
+  color: #fff;
+  padding: 0.5em 0.75em;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 18px;
+}
