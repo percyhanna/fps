@@ -38,6 +38,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
   <script type="text/javascript">var _kmq = _kmq || [];
+  var KM_EVENT_PROPERTIES = {
+    'Page View': function () {
+      return {
+        'Blog Post': /\/blog\/\d{4}/.test(location.pathname)
+      };
+    }
+  };
+
   var _kmk = _kmk || '449365614749a295221e9855187ad9ed492ede16';
   var _kmq = _kmq || [];
 
