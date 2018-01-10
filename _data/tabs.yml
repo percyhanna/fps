@@ -3,11 +3,14 @@ chorus:
   tabs:
     '/chorus/': Chorus
     '/chorus/musical-director': Musical Director
+    '/chorus/repertoire': Repertoire
+
 jazz:
   name: Foothills Philharmonic Vocal Jazz
   tabs:
     '/vocal-jazz/': Vocal Jazz
     '/vocal-jazz/musical-director': Musical Director
+
 orchestra:
   name: Foothills Philharmonic Orchestra
   tabs:
