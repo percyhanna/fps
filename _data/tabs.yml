@@ -1,19 +1,19 @@
 chorus:
-  name: Foothills Philharmonic Chorus
+  name: Chorus
   tabs:
     '/chorus/': Chorus
     '/chorus/musical-director': Musical Director
-    '/chorus/repertoire': Repertoire
+    '/chorus/repertoire': Past Repertoire
 
 jazz:
-  name: Foothills Philharmonic Vocal Jazz
+  name: Vocal Jazz
   tabs:
     '/vocal-jazz/': Vocal Jazz
     '/vocal-jazz/musical-director': Musical Director
     '/vocal-jazz/accompanist': Accompanist
 
 orchestra:
-  name: Foothills Philharmonic Orchestra
+  name: Orchestra
   tabs:
     '/orchestra/': Orchestra
     '/orchestra/musical-director': Musical Director
