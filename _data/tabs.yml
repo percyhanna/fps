@@ -5,6 +5,12 @@ chorus:
     '/chorus/musical-director': Musical Director
     '/chorus/repertoire': Past Repertoire
 
+chamber:
+  name: Chamber Chorus
+  tabs:
+    '/chamber-chorus/': Chamber Chorus
+    '/chamber-chorus/repertoire': Past Repertoire
+
 jazz:
   name: Vocal Jazz
   tabs:
