@@ -3,6 +3,7 @@ chorus:
   tabs:
     '/chorus/': Chorus
     '/chorus/musical-director': Musical Director
+    '/chorus/accompanist': Accompanist
     '/chorus/repertoire': Past Repertoire
 
 chamber:
