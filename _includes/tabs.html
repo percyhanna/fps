@@ -1,4 +1,4 @@
-<div class="tab-container hidden-md-down">
+<div class="tab-container d-none d-lg-block">
   <ul class="tabs">
     <li class="stretch"><h1>{{ include.tabs.name }}</h1></li>
     {% for tab in include.tabs.tabs %}
@@ -7,7 +7,7 @@
   </ul>
 </div>
 
-<div class="container wrapped-tab-container hidden-lg-up">
+<div class="container wrapped-tab-container d-block d-lg-none">
   <div class="row no-gutters">
     <div class="col-12">
       <h1>{{ include.tabs.name }}</h1>

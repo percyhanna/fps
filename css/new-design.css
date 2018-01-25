@@ -179,7 +179,7 @@ footer a {
 }
 
 #nav ul li:first-child a,
-#nav ul li.hidden-sm-up + li a {
+#nav ul li.d-block.d-sm-none + li a {
   border: none;
 }
 
