@@ -516,6 +516,11 @@ aside.box {
   font-size: 18px;
 }
 
+.link-button:hover {
+  color: #fff;
+  background-color: #4b57a6;
+}
+
 .facebook-button, .facebook-button:hover, .facebook-button:active, .facebook-button:focus {
   background-color: #3b5998;
   color: white;
