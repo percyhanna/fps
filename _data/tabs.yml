@@ -16,7 +16,6 @@ jazz:
   name: Vocal Jazz
   tabs:
     '/vocal-jazz/': Vocal Jazz
-    '/vocal-jazz/musical-director': Musical Director
     '/vocal-jazz/accompanist': Accompanist
 
 orchestra:
