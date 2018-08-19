@@ -206,27 +206,8 @@ footer a {
   display: block;
 }
 
-#fps_carousel h3 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 28px;
-  margin: 0;
-}
-
 #page h1 {
   border-bottom: solid 1px #ddd;
-}
-
-#page .carousel-caption {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(32, 32, 32, 0.6);
-  text-shadow: 1px 1px 2px black;
-  padding: 18px 0;
-}
-
-#page .carousel-caption a {
-  color: #fff;
 }
 
 .content-image {
