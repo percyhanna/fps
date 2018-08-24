@@ -522,3 +522,8 @@ blockquote h5,
 blockquote h6 {
   text-align: center;
 }
+
+.btn-primary {
+  background-color: #4b57a6;
+  border-color: #4b57a6;
+}
