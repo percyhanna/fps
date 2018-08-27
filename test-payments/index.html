@@ -1,0 +1,224 @@
+---
+layout: default
+title: Test Payments
+---
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+
+<div class="row">
+  <div class="col">
+    <h1>Foothills Philharomnic Society — 2018 Registration</h1>
+  </div>
+</div>
+
+<div id="app">
+  <div class="row">
+    <div
+      class="col col-md-6"
+      v-for="item in items"
+      v-bind:key="item.key"
+    >
+      <h3>${ item.title }</h3>
+
+      <label class="btn btn-info btn-lg">
+        <input type="checkbox" v-model="selectedItems" :value="item.key">
+
+          Register for ${ item.title }
+      </label>
+
+      <ul>
+        <li v-for="detail in item.details">
+          <strong>${ detail.label }:</strong> ${ detail.value }
+        </li>
+
+        <li>
+          <strong>Fee:</strong> $ ${ formatCurrency(item.amount) }
+        </li>
+      </ul>
+    </div>
+
+    <div class="col col-md-6">
+      <h3>Society Membership</h3>
+
+      <label class="btn btn-info btn-lg">
+        <input type="checkbox" name="foo" v-if="forceMembership" disabled="disabled" :checked="true">
+        <input type="checkbox" name="bar" v-if="!forceMembership" v-model="membership">
+
+          Register as Society Member
+      </label>
+
+      <p>All performers must pay a Society Membership fee once per year. This option will be automcatically selected if you choose a performance group.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+      <h3>Cart Summary</h3>
+
+      <table class="table" style="max-width: 100%;">
+        <thead>
+          <th>Item</th>
+          <th width="35%" style="text-align: right;">Price</th>
+        </thead>
+        <tbody>
+          <tr
+            is="cart-item"
+            v-for="item in items"
+            v-if="selectedItems.indexOf(item.key) !== -1"
+            v-bind:item="item"
+            v-bind:key="item.key">
+          </tr>
+
+          <tr
+            is="cart-item"
+            v-if="membership || forceMembership"
+            v-bind:item="societyFee"
+            key="fps">
+          </tr>
+
+          <tr>
+            <th>Subtotal:</th>
+            <td><item-price v-bind:amount="subtotal"></item-price></td>
+          </tr>
+
+          <tr>
+            <th>Processing fee:</th>
+            <td><item-price v-bind:amount="processingFee"></item-price></td>
+          </tr>
+
+          <tr>
+            <th>Total:</th>
+            <td><item-price v-bind:amount="total"></item-price></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function formatCurrency (number) {
+    return (number / 100).toFixed(2);
+  }
+
+  var societyFee = {
+    key: 'fps',
+    title: 'Society Fee',
+    amount: 2000,
+  };
+
+  var items = [
+    {
+      key: 'fpc',
+      title: 'Chorus',
+      amount: 10000,
+      details: [
+        { label: 'Date', value: 'Tuesdays' },
+        { label: 'Time', value: '8pm-10pm' },
+        { label: 'Location', value: 'Okotoks Alliance Church' },
+        { label: 'Starting Date', value: 'September 4' },
+      ],
+    },
+    {
+      key: 'fpcc',
+      title: 'Chamber Chorus',
+      amount: 4000,
+      details: [
+        { label: 'Date', value: 'Every 2nd Tuesday' },
+        { label: 'Time', value: '10pm-11pm' },
+        { label: 'Location', value: 'Okotoks Alliance Church' },
+        { label: 'Starting Date', value: 'September 18' },
+      ],
+    },
+    {
+      key: 'fpvj',
+      title: 'Vocal Jazz',
+      amount: 10000,
+      details: [
+        { label: 'Date', value: 'Thursdays' },
+        { label: 'Time', value: '8:00pm-10:00pm' },
+        { label: 'Location', value: 'Okotoks Alliance Church' },
+        { label: 'Starting Date', value: 'TBC' },
+      ],
+    },
+    {
+      key: 'carolling',
+      title: 'Carolling Chorus',
+      amount: 0,
+      details: [
+        { label: 'Rehearsal Date & Time', value: 'TBD' },
+        { label: 'Location', value: 'Okotoks Alliance Church' },
+      ],
+    },
+    {
+      key: 'fpo',
+      title: 'Orchestra',
+      amount: 8000,
+      details: [
+        { label: 'Date', value: 'Wednesdays' },
+        { label: 'Location', value: 'Okotoks Alliance Church' },
+        { label: 'First Rehearsal', value: 'Wednesday Sept. 19. 7-10 pm' },
+      ],
+    },
+  ];
+
+  Vue.component('item-price', {
+    delimiters: ['${', '}'],
+    props: [
+      'amount',
+    ],
+    template: '<div style="text-align: right; white-space: nowrap;"><span style="float: left;">$</span> ${ formatCurrency(amount) }</div>',
+  });
+
+  Vue.component('cart-item', {
+    delimiters: ['${', '}'],
+    props: [
+      'item',
+    ],
+    template: '<tr><td>    ${ item.title }</td><td><item-price v-bind:amount="item.amount"></item-price></td></tr>',
+  });
+
+  var app = new Vue({
+    delimiters: ['${', '}'],
+    el: '#app',
+    computed: {
+      processingFee: function () {
+        if (this.subtotal === 0) {
+          return 0;
+        }
+
+        return this.subtotal * .029 + 30;
+      },
+      forceMembership: function () {
+        return this.selectedItems.length > 0;
+      },
+      subtotal: function () {
+        var total = 0;
+
+        if (this.membership || this.selectedItems.length > 0) {
+          total += 2000;
+        }
+
+        for (var i = 0; i < this.selectedItems.length; i++) {
+          var key = this.selectedItems[i];
+          var item = _.find(items, { key: key });
+          if (item) {
+            total += item.amount;
+          }
+        }
+
+        return total;
+      },
+      total: function () {
+        return this.subtotal + this.processingFee;
+      }
+    },
+    data: {
+      items: items,
+      membership: false,
+      selectedItems: ['fpc'],
+      societyFee: societyFee,
+    },
+  });
+</script>
