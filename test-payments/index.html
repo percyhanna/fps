@@ -1,0 +1,272 @@
+---
+layout: default
+title: Test Payments
+---
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+<script class="vue-js-template" name="item-price" type="text/html" data-props="amount">
+  <div style="text-align: right; white-space: nowrap;">
+    <span style="float: left;">$</span>
+    ${ formatCurrency(amount) }
+  </div>
+</script>
+
+<div id="app">
+  <div class="row">
+    <div class="col col-10 offset-1 col-md-8 offset-md-2">
+      <h1>2018 Fall Registration</h1>
+
+      <table class="table" style="max-width: 100%;">
+        <thead>
+          <th>Description</th>
+          <th width="35%" style="text-align: right;">Price</th>
+        </thead>
+        <tbody>
+          <tr v-for="item in items">
+            <td>
+              <h3>${ item.title }</h3>
+
+              <ul>
+                <li v-for="detail in item.details">
+                  <strong>${ detail.label }:</strong> ${ detail.value }
+                </li>
+              </ul>
+            </td>
+
+            <td style="text-align: right;">
+              <h3>$ ${ formatCurrency(item.amount) }</h3>
+
+              <label class="btn btn-info">
+                Register  
+
+                <input
+                  type="checkbox"
+                  :name="item.key"
+                  v-model="selectedItems"
+                  :id="item.key"
+                  :value="item.key"
+                >
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h3>${ societyFee.title }</h3>
+
+              <p>All performers must pay a Society Membership fee once per year. This option will be automcatically selected if you choose a performance group.</p>
+            </td>
+
+            <td style="text-align: right;">
+              <h3>$ ${ formatCurrency(societyFee.amount) }</h3>
+
+              <label class="btn btn-info" :disabled="forceMembership">
+                Register  
+
+                <input type="checkbox" v-if="forceMembership" disabled="disabled" :checked="true">
+                <input type="checkbox" v-if="!forceMembership" v-model="membership">
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Subtotal:</th>
+            <td><item-price v-bind:amount="subtotal"></item-price></td>
+          </tr>
+
+          <tr>
+            <th>Processing fee:</th>
+            <td><item-price v-bind:amount="processingFee"></item-price></td>
+          </tr>
+
+          <tr>
+            <th>Total:</th>
+            <td><item-price v-bind:amount="total"></item-price></td>
+          </tr>
+
+          <tr>
+            <td colspan="2" style="text-align: right;">
+              <button class="btn btn-primary btn-lg" :disabled="(subtotal > 0) ? null : 'disabled'" v-on:click="pay">Pay Now</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+function formatCurrency (number) {
+  return (number / 100).toFixed(2);
+}
+
+function runCart () {
+  var societyFee = {
+    key: 'fps',
+    title: 'Society Fee',
+    amount: 2000,
+  };
+
+  var items = [
+    {
+      key: 'fpc',
+      title: 'Chorus',
+      amount: 10000,
+      details: [
+        { label: 'Date', value: 'Tuesdays' },
+        { label: 'Time', value: '8pm-10pm' },
+        { label: 'Location', value: 'Okotoks Alliance Church' },
+        { label: 'Starting Date', value: 'September 4' },
+      ],
+    },
+    {
+      key: 'fpcc',
+      title: 'Chamber Chorus',
+      amount: 4000,
+      details: [
+        { label: 'Date', value: 'Every 2nd Tuesday' },
+        { label: 'Time', value: '10pm-11pm' },
+        { label: 'Location', value: 'Okotoks Alliance Church' },
+        { label: 'Starting Date', value: 'September 18' },
+      ],
+    },
+    {
+      key: 'fpvj',
+      title: 'Vocal Jazz',
+      amount: 10000,
+      details: [
+        { label: 'Date', value: 'Thursdays' },
+        { label: 'Time', value: '8:00pm-10:00pm' },
+        { label: 'Location', value: 'Okotoks Alliance Church' },
+        { label: 'Starting Date', value: 'TBC' },
+      ],
+    },
+    {
+      key: 'carolling',
+      title: 'Carolling Chorus',
+      amount: 0,
+      details: [
+        { label: 'Rehearsal Date & Time', value: 'TBD' },
+        { label: 'Location', value: 'Okotoks Alliance Church' },
+      ],
+    },
+    {
+      key: 'fpo',
+      title: 'Orchestra',
+      amount: 8000,
+      details: [
+        { label: 'Date', value: 'Wednesdays' },
+        { label: 'Location', value: 'Okotoks Alliance Church' },
+        { label: 'First Rehearsal', value: 'Wednesday Sept. 19. 7-10 pm' },
+      ],
+    },
+  ];
+
+  function generateTemplate (node) {
+    var name = node.getAttribute('name');
+    var props = ((node.dataset && node.dataset.props) || node.getAttribute('data-props') || '').split(',');
+    var template = node.innerHTML;
+
+    Vue.component(name, {
+      delimiters: ['${', '}'],
+      props: props,
+      template: template,
+    });
+  }
+
+  var templates = document.getElementsByClassName('vue-js-template');
+  for (var i = 0; i < templates.length; i++) {
+    generateTemplate(templates[i]);
+  }
+
+  var app = new Vue({
+    delimiters: ['${', '}'],
+    el: '#app',
+    computed: {
+      processingFee: function () {
+        if (this.subtotal === 0) {
+          return 0;
+        }
+
+        return this.subtotal * .029 + 30;
+      },
+      forceMembership: function () {
+        return this.selectedItems.length > 0;
+      },
+      subtotal: function () {
+        var total = 0;
+
+        if (this.membership || this.selectedItems.length > 0) {
+          total += 2000;
+        }
+
+        for (var i = 0; i < this.selectedItems.length; i++) {
+          var key = this.selectedItems[i];
+          var item = _.find(items, { key: key });
+          if (item) {
+            total += item.amount;
+          }
+        }
+
+        return total;
+      },
+      total: function () {
+        return this.subtotal + this.processingFee;
+      }
+    },
+    data: {
+      items: items,
+      membership: false,
+      selectedItems: [],
+      societyFee: societyFee,
+    },
+    methods: {
+      pay: function (event) {
+        handler.open({
+          amount: this.total,
+          width: 500,
+        });
+
+        event.preventDefault();
+        event.stopPropagation();
+      },
+    },
+  });
+
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_Tk6deQ7Ys40NMJZdt38ATHEk',
+    locale: 'auto',
+    name: '2018 Fall Registration Fees',
+    description: 'Foothills Philharmonic Society',
+    token: function(token) {
+      var items = app.selectedItems.slice().concat('fps');
+
+      $.ajax({
+        type: 'POST',
+        url: 'https://ekdzvo9nbf.execute-api.ca-central-1.amazonaws.com/dev/charges',
+        dataType: 'json',
+        data: JSON.stringify({
+          token: token.id,
+          email: token.email,
+          items: items,
+        }),
+        success: function () {
+          window.location = '/thank-you/';
+        },
+        error: function () {
+          alert('An error occurreed processing your payment. Please contact info@foothillsphilharmonic.com if this problem persists.');
+        },
+      });
+    }
+  });
+}
+
+runCart();
+</script>
