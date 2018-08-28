@@ -3,8 +3,13 @@ layout: default
 title: Test Payments
 ---
 
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
 
 <script class="vue-js-template" name="item-price" type="text/html" data-props="amount">
   <div style="text-align: right; white-space: nowrap;">
@@ -38,11 +43,12 @@ title: Test Payments
             <td style="text-align: right;">
               <h3>$ ${ formatCurrency(item.amount) }</h3>
 
-              <label class="btn btn-info btn-lg">
+              <label class="btn btn-info">
                 Register  
 
                 <input
                   type="checkbox"
+                  :name="item.key"
                   v-model="selectedItems"
                   :id="item.key"
                   :value="item.key"
@@ -61,11 +67,11 @@ title: Test Payments
             <td style="text-align: right;">
               <h3>$ ${ formatCurrency(societyFee.amount) }</h3>
 
-              <label class="btn btn-info btn-lg" :disabled="forceMembership">
+              <label class="btn btn-info" :disabled="forceMembership">
                 Register  
 
-                <input type="checkbox" name="foo" v-if="forceMembership" disabled="disabled" :checked="true">
-                <input type="checkbox" name="bar" v-if="!forceMembership" v-model="membership">
+                <input type="checkbox" v-if="forceMembership" disabled="disabled" :checked="true">
+                <input type="checkbox" v-if="!forceMembership" v-model="membership">
               </label>
             </td>
           </tr>
@@ -84,6 +90,12 @@ title: Test Payments
             <th>Total:</th>
             <td><item-price v-bind:amount="total"></item-price></td>
           </tr>
+
+          <tr>
+            <td colspan="2" style="text-align: right;">
+              <button class="btn btn-primary btn-lg" :disabled="(subtotal > 0) ? null : 'disabled'" v-on:click="pay">Pay Now</button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -91,10 +103,11 @@ title: Test Payments
 </div>
 
 <script type="text/javascript">
-  function formatCurrency (number) {
-    return (number / 100).toFixed(2);
-  }
+function formatCurrency (number) {
+  return (number / 100).toFixed(2);
+}
 
+function runCart () {
   var societyFee = {
     key: 'fps',
     title: 'Society Fee',
@@ -156,14 +169,6 @@ title: Test Payments
     },
   ];
 
-  Vue.component('cart-item', {
-    delimiters: ['${', '}'],
-    props: [
-      'item',
-    ],
-    template: '<tr><td>    ${ item.title }</td><td><item-price v-bind:amount="item.amount"></item-price></td></tr>',
-  });
-
   function generateTemplate (node) {
     var name = node.getAttribute('name');
     var props = ((node.dataset && node.dataset.props) || node.getAttribute('data-props') || '').split(',');
@@ -222,5 +227,46 @@ title: Test Payments
       selectedItems: [],
       societyFee: societyFee,
     },
+    methods: {
+      pay: function (event) {
+        handler.open({
+          amount: this.total,
+          width: 500,
+        });
+
+        event.preventDefault();
+        event.stopPropagation();
+      },
+    },
   });
+
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_Tk6deQ7Ys40NMJZdt38ATHEk',
+    locale: 'auto',
+    name: '2018 Fall Registration Fees',
+    description: 'Foothills Philharmonic Society',
+    token: function(token) {
+      var items = app.selectedItems.slice().concat('fps');
+
+      $.ajax({
+        type: 'POST',
+        url: 'https://ekdzvo9nbf.execute-api.ca-central-1.amazonaws.com/dev/charges',
+        dataType: 'json',
+        data: JSON.stringify({
+          token: token.id,
+          email: token.email,
+          items: items,
+        }),
+        success: function () {
+          window.location = '/thank-you/';
+        },
+        error: function () {
+          alert('An error occurreed processing your payment. Please contact info@foothillsphilharmonic.com if this problem persists.');
+        },
+      });
+    }
+  });
+}
+
+runCart();
 </script>
