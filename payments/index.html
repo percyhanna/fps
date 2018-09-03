@@ -107,6 +107,12 @@ title: Test Payments
 </div>
 
 <script type="text/javascript">
+var stripeKey = 'pk_test_Tk6deQ7Ys40NMJZdt38ATHEk';
+
+if (!/test/.test(location.href)) {
+  stripeKey = 'pk_live_Be4JNC3A7KCkFsjqusOUDmoA';
+}
+
 function formatCurrency (number) {
   return (number / 100).toFixed(2);
 }
@@ -263,7 +269,7 @@ function runCart () {
   });
 
   var handler = StripeCheckout.configure({
-    key: 'pk_test_Tk6deQ7Ys40NMJZdt38ATHEk',
+    key: stripeKey,
     locale: 'auto',
     name: '2018 Fall Registration Fees',
     description: 'Foothills Philharmonic Society',
