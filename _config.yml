@@ -4,6 +4,8 @@ url: http://www.foothillsphilharmonic.com
 permalink: /:categories/:year/:month/:day/:title
 post_dirs: true
 excerpt_separator: <!--more-->
+include:
+  - .well-known
 
 defaults:
   -
