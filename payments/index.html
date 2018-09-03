@@ -274,7 +274,9 @@ function runCart () {
     name: '2018 Fall Registration Fees',
     description: 'Foothills Philharmonic Society',
     token: function(token) {
-      var items = app.selectedItems.slice().concat('fps');
+      var items = app.selectedItems.slice().concat('fps').map(function (item) {
+        return 'SKU_' + item.toUpperCase();
+      });
 
       $.ajax({
         type: 'POST',
