@@ -257,6 +257,11 @@ function runCart () {
     },
     methods: {
       pay: function (event) {
+        if (app.selectedItems.indexOf('fpc') !== -1 && app.selectedItems.indexOf('fpc_prepay') !== -1) {
+          alert('You have registered twice for FPC (Fall, and pre-paying for full year). Please select only one.');
+          return;
+        }
+
         handler.open({
           amount: this.total,
           width: 500,
