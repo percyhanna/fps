@@ -9,7 +9,7 @@ title: 2018 Fall Registration Fees
   crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
-<script src="https://checkout.stripe.com/checkout.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
 
 <script class="vue-js-template" name="item-price" type="text/html" data-props="amount">
   <div style="text-align: right; white-space: nowrap;">
@@ -94,13 +94,69 @@ title: 2018 Fall Registration Fees
             <th>Total:</th>
             <td><item-price v-bind:amount="total"></item-price></td>
           </tr>
-
-          <tr>
-            <td colspan="2" style="text-align: right;">
-              <button class="btn btn-primary btn-lg" :disabled="(subtotal > 0) ? null : 'disabled'" v-on:click="pay">Pay Now</button>
-            </td>
-          </tr>
         </tbody>
+      </table>
+
+      <form :action="apiEndpoint" method="post" id="payment-form">
+        <table class="table" style="max-width: 600px; margin: 0 auto;">
+          <thead>
+            <tr>
+              <th colspan="2">
+                <h3>Payment</h3>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2">
+                <p>Please enter your credit card information below. Your payment information is processed securely through <a href="https://stripe.com" target="_blank">Stripe</a>.</p>
+              </td>
+            </tr>
+
+            <tr>
+              <th width="30%">
+                <label for="name">
+                  Name
+                </label>
+              </th>
+              <td>
+                <input v-model="name" id="name">
+              </td>
+            </tr>
+
+            <tr>
+              <th width="30%">
+                <label for="email">
+                  Email
+                </label>
+              </th>
+              <td>
+                <input v-model="email" id="email">
+              </td>
+            </tr>
+
+            <tr>
+              <th width="30%">
+                <label for="card-element">
+                  Credit card
+                </label>
+              </th>
+              <td>
+                <div id="card-element">
+                  <!-- A Stripe Element will be inserted here. -->
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <div id="card-errors" role="alert"></div>
+
+                <button class="btn btn-primary btn-lg" :disabled="(subtotal > 0) ? null : 'disabled'">Submit Payment</button>
+              </td>
+            </tr>
+          </tbody>
+        </form>
       </table>
     </div>
   </div>
@@ -252,59 +308,117 @@ function runCart () {
       },
     },
     data: {
+      apiEndpoint: apiEndpoint,
+      email: '',
       items: items,
       membership: true,
+      name: '',
       selectedItems: [],
       societyFee: societyFee,
-    },
-    methods: {
-      pay: function (event) {
-        if (app.selectedItems.indexOf('fpc') !== -1 && app.selectedItems.indexOf('fpc_prepay') !== -1) {
-          alert('You have registered twice for FPC (Fall, and pre-paying for full year). Please select only one.');
-          return;
-        }
-
-        handler.open({
-          amount: this.total,
-          width: 500,
-        });
-
-        event.preventDefault();
-        event.stopPropagation();
-      },
     },
   });
 
   document.getElementById('app').style.display = 'block';
 
-  var handler = StripeCheckout.configure({
-    key: stripeKey,
-    locale: 'auto',
-    name: '2018 Fall Registration Fees',
-    description: 'Foothills Philharmonic Society',
-    token: function(token) {
-      var items = app.selectedItems.slice().concat('fps').map(function (item) {
-        return 'SKU_' + item.toUpperCase();
-      });
+  var stripe = Stripe(stripeKey);
+  var elements = stripe.elements({
+    fonts: [
+      {
+        cssSrc: 'https://fonts.googleapis.com/css?family=Roboto|Josefin+Sans',
+      },
+    ],
+  });
 
-      $.ajax({
-        type: 'POST',
-        url: apiEndpoint,
-        dataType: 'json',
-        data: JSON.stringify({
-          token: token.id,
-          email: token.email,
-          items: items,
-        }),
-        success: function () {
-          window.location = '/thank-you/';
+  var form = document.getElementById('payment-form');
+  var card = elements.create('card', {
+    card: {
+      hidePostalCode: true,
+    },
+    iconStyle: 'solid',
+    style: {
+      base: {
+        color: '#32325D',
+        fontWeight: 500,
+        fontFamily: 'Roboto, sans-serif',
+        fontSize: '16px',
+        fontSmoothing: 'antialiased',
+
+        '::placeholder': {
+          color: '#CFD7DF',
         },
-        error: function () {
-          alert('An error occurreed processing your payment. Please contact info@foothillsphilharmonic.com if this problem persists.');
+        ':-webkit-autofill': {
+          color: '#e39f48',
         },
-      });
+      },
+      invalid: {
+        color: '#E25950',
+
+        '::placeholder': {
+          color: '#FFCCA5',
+        },
+      },
+    },
+  });
+  var errorField = document.getElementById('card-errors');
+
+  card.mount('#card-element');
+
+  card.addEventListener('change', function(event) {
+    if (event.error) {
+      errorField.textContent = event.error.message;
+    } else {
+      errorField.textContent = '';
     }
   });
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (app.selectedItems.indexOf('fpc') !== -1 && app.selectedItems.indexOf('fpc_prepay') !== -1) {
+      alert('You have registered twice for FPC (Fall, and pre-paying for full year). Please select only one.');
+      return;
+    }
+
+    if (!app.name || !app.email) {
+      alert('Please enter your name and email address.');
+      return;
+    }
+
+    stripe.createToken(card).then(function(result) {
+      if (result.error) {
+        // Inform the customer that there was an error.
+        var errorElement = document.getElementById('card-errors');
+        errorElement.textContent = result.error.message;
+      } else {
+        // Send the token to your server.
+        stripeTokenHandler(result.token);
+      }
+    });
+  });
+
+  function stripeTokenHandler (token) {
+    var email = document.getElementById('email').value;
+    var items = app.selectedItems.slice().concat('fps').map(function (item) {
+      return 'SKU_' + item.toUpperCase();
+    });
+
+    $.ajax({
+      type: 'POST',
+      url: apiEndpoint,
+      dataType: 'json',
+      data: JSON.stringify({
+        token: token.id,
+        email: email,
+        items: items,
+      }),
+      success: function () {
+        window.location = '/thank-you/';
+      },
+      error: function () {
+        alert('An error occurreed processing your payment. Please contact info@foothillsphilharmonic.com if this problem persists.');
+      },
+    });
+  }
 }
 
 runCart();
