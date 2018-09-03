@@ -108,9 +108,11 @@ title: 2018 Fall Registration Fees
 
 <script type="text/javascript">
 var stripeKey = 'pk_test_Tk6deQ7Ys40NMJZdt38ATHEk';
+var apiEndpoint = 'https://ekdzvo9nbf.execute-api.ca-central-1.amazonaws.com/dev/charges';
 
 if (!/test/.test(location.href)) {
   stripeKey = 'pk_live_Be4JNC3A7KCkFsjqusOUDmoA';
+  apiEndpoint = 'https://4o62a1qinh.execute-api.ca-central-1.amazonaws.com/prod/charges';
 }
 
 function formatCurrency (number) {
@@ -287,7 +289,7 @@ function runCart () {
 
       $.ajax({
         type: 'POST',
-        url: 'https://ekdzvo9nbf.execute-api.ca-central-1.amazonaws.com/dev/charges',
+        url: apiEndpoint,
         dataType: 'json',
         data: JSON.stringify({
           token: token.id,
