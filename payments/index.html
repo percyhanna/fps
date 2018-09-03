@@ -41,9 +41,11 @@ title: Test Payments
             </td>
 
             <td style="text-align: right;">
-              <h3>$ ${ formatCurrency(item.amount) }</h3>
+              <h3 style="margin-bottom: 0;">$ ${ formatCurrency(item.amount) }</h3>
 
-              <label class="btn btn-info">
+              <p v-if="item.fee > 0" style="margin-top: 0; color: #888;"><em>+ $${ formatCurrency(item.fee) } processing fee</em></p>
+
+              <label class="btn btn-info" style="margin-top: 0.5em;">
                 Register  
 
                 <input
@@ -65,7 +67,9 @@ title: Test Payments
             </td>
 
             <td style="text-align: right;">
-              <h3>$ ${ formatCurrency(societyFee.amount) }</h3>
+              <h3 style="margin-bottom: 0;">$ ${ formatCurrency(societyFee.amount) }</h3>
+
+              <p style="margin-top: 0; color: #888;"><em>+ $${ formatCurrency(societyFee.fee) } processing fee</em></p>
 
               <label class="btn btn-info" :disabled="forceMembership">
                 Register  
@@ -103,6 +107,12 @@ title: Test Payments
 </div>
 
 <script type="text/javascript">
+var stripeKey = 'pk_test_Tk6deQ7Ys40NMJZdt38ATHEk';
+
+if (!/test/.test(location.href)) {
+  stripeKey = 'pk_live_Be4JNC3A7KCkFsjqusOUDmoA';
+}
+
 function formatCurrency (number) {
   return (number / 100).toFixed(2);
 }
@@ -112,13 +122,27 @@ function runCart () {
     key: 'fps',
     title: 'Society Fee',
     amount: 2000,
+    fee: 88,
   };
 
   var items = [
     {
       key: 'fpc',
-      title: 'Chorus',
+      title: 'Chorus (Fall only)',
       amount: 10000,
+      fee: 290,
+      details: [
+        { label: 'Date', value: 'Tuesdays' },
+        { label: 'Time', value: '8pm-10pm' },
+        { label: 'Location', value: 'Okotoks Alliance Church' },
+        { label: 'Starting Date', value: 'September 4' },
+      ],
+    },
+    {
+      key: 'fpc_prepay',
+      title: 'Chorus (Fall + Spring)',
+      amount: 18000,
+      fee: 522,
       details: [
         { label: 'Date', value: 'Tuesdays' },
         { label: 'Time', value: '8pm-10pm' },
@@ -130,6 +154,7 @@ function runCart () {
       key: 'fpcc',
       title: 'Chamber Chorus',
       amount: 4000,
+      fee: 116,
       details: [
         { label: 'Date', value: 'Every 2nd Tuesday' },
         { label: 'Time', value: '10pm-11pm' },
@@ -141,6 +166,7 @@ function runCart () {
       key: 'fpvj',
       title: 'Vocal Jazz',
       amount: 10000,
+      fee: 290,
       details: [
         { label: 'Date', value: 'Thursdays' },
         { label: 'Time', value: '8:00pm-10:00pm' },
@@ -152,6 +178,7 @@ function runCart () {
       key: 'carolling',
       title: 'Carolling Chorus',
       amount: 0,
+      fee: 0,
       details: [
         { label: 'Rehearsal Date & Time', value: 'TBD' },
         { label: 'Location', value: 'Okotoks Alliance Church' },
@@ -161,6 +188,7 @@ function runCart () {
       key: 'fpo',
       title: 'Orchestra',
       amount: 8000,
+      fee: 232,
       details: [
         { label: 'Date', value: 'Wednesdays' },
         { label: 'Location', value: 'Okotoks Alliance Church' },
@@ -219,11 +247,11 @@ function runCart () {
       },
       total: function () {
         return this.subtotal + this.processingFee;
-      }
+      },
     },
     data: {
       items: items,
-      membership: false,
+      membership: true,
       selectedItems: [],
       societyFee: societyFee,
     },
@@ -241,12 +269,14 @@ function runCart () {
   });
 
   var handler = StripeCheckout.configure({
-    key: 'pk_test_Tk6deQ7Ys40NMJZdt38ATHEk',
+    key: stripeKey,
     locale: 'auto',
     name: '2018 Fall Registration Fees',
     description: 'Foothills Philharmonic Society',
     token: function(token) {
-      var items = app.selectedItems.slice().concat('fps');
+      var items = app.selectedItems.slice().concat('fps').map(function (item) {
+        return 'SKU_' + item.toUpperCase();
+      });
 
       $.ajax({
         type: 'POST',
