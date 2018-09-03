@@ -18,7 +18,7 @@ title: FPS Due Payments
   </div>
 </script>
 
-<div id="app">
+<div id="app" style="display: none;">
   <div class="row">
     <div class="col col-10 offset-1 col-md-8 offset-md-2">
       <h1>2018 Fall Registration</h1>
@@ -272,6 +272,8 @@ function runCart () {
       },
     },
   });
+
+  document.getElementById('app').style.display = 'block';
 
   var handler = StripeCheckout.configure({
     key: stripeKey,
