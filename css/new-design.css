@@ -234,7 +234,7 @@ footer a {
 }
 
 .content-image img {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 #social-menu {
@@ -430,6 +430,10 @@ img.float-left {
 
 .float-right {
   float: right;
+}
+
+.text-right {
+  text-align: right;
 }
 
 img.float-right {
