@@ -71,11 +71,10 @@ title: 2018 Fall Registration Fees
 
               <p style="margin-top: 0; color: #888;"><em>+ $${ formatCurrency(societyFee.fee) } processing fee</em></p>
 
-              <label class="btn btn-info" :disabled="forceMembership">
+              <label class="btn btn-info">
                 Register  
 
-                <input type="checkbox" v-if="forceMembership" disabled="disabled" :checked="true">
-                <input type="checkbox" v-if="!forceMembership" v-model="membership">
+                <input type="checkbox" v-model="membership">
               </label>
             </td>
           </tr>
@@ -88,6 +87,11 @@ title: 2018 Fall Registration Fees
           <tr>
             <th>Processing fee:</th>
             <td><item-price v-bind:amount="processingFee"></item-price></td>
+          </tr>
+
+          <tr>
+            <th>Transaction fee:</th>
+            <td><item-price v-bind:amount="transactionFee"></item-price></td>
           </tr>
 
           <tr>
@@ -115,6 +119,8 @@ if (!/test/.test(location.href)) {
   apiEndpoint = 'https://4o62a1qinh.execute-api.ca-central-1.amazonaws.com/prod/charges';
 }
 
+const BASE_FEE = 30;
+
 function formatCurrency (number) {
   return (number / 100).toFixed(2);
 }
@@ -124,15 +130,15 @@ function runCart () {
     key: 'fps',
     title: 'Society Fee',
     amount: 2000,
-    fee: 88,
+    fee: 60,
   };
 
   var items = [
     {
       key: 'fpc',
-      title: 'Chorus (Fall only)',
+      title: 'Chorus',
       amount: 10000,
-      fee: 290,
+      fee: 299,
       details: [
         { label: 'Date', value: 'Tuesdays' },
         { label: 'Time', value: '8pm-10pm' },
@@ -141,22 +147,22 @@ function runCart () {
       ],
     },
     {
-      key: 'fpc_prepay',
-      title: 'Chorus (Fall + Spring)',
-      amount: 18000,
-      fee: 522,
+      key: 'fpmc',
+      title: 'Men’s Chorus',
+      amount: 10000,
+      fee: 299,
       details: [
-        { label: 'Date', value: 'Tuesdays' },
-        { label: 'Time', value: '8pm-10pm' },
+        { label: 'Date', value: 'Every 2nd Tuesday' },
+        { label: 'Time', value: '10pm-11pm' },
         { label: 'Location', value: 'Okotoks Alliance Church' },
-        { label: 'Starting Date', value: 'September 4' },
+        { label: 'Starting Date', value: 'September 18' },
       ],
     },
     {
       key: 'fpcc',
       title: 'Chamber Chorus',
       amount: 4000,
-      fee: 116,
+      fee: 119,
       details: [
         { label: 'Date', value: 'Every 2nd Tuesday' },
         { label: 'Time', value: '10pm-11pm' },
@@ -168,7 +174,7 @@ function runCart () {
       key: 'fpvj',
       title: 'Vocal Jazz',
       amount: 10000,
-      fee: 290,
+      fee: 299,
       details: [
         { label: 'Date', value: 'Thursdays' },
         { label: 'Time', value: '8:00pm-10:00pm' },
@@ -177,24 +183,13 @@ function runCart () {
       ],
     },
     {
-      key: 'carolling',
-      title: 'Carolling Chorus',
-      amount: 0,
-      fee: 0,
+      key: 'fpoc',
+      title: 'Opera Chorus',
+      amount: 2000,
+      fee: 60,
       details: [
         { label: 'Rehearsal Date & Time', value: 'TBD' },
         { label: 'Location', value: 'Okotoks Alliance Church' },
-      ],
-    },
-    {
-      key: 'fpo',
-      title: 'Orchestra',
-      amount: 8000,
-      fee: 232,
-      details: [
-        { label: 'Date', value: 'Wednesdays' },
-        { label: 'Location', value: 'Okotoks Alliance Church' },
-        { label: 'First Rehearsal', value: 'Wednesday Sept. 19. 7-10 pm' },
       ],
     },
   ];
@@ -221,19 +216,29 @@ function runCart () {
     el: '#app',
     computed: {
       processingFee: function () {
-        if (this.subtotal === 0) {
-          return 0;
+        var total = 0;
+
+        if (this.membership) {
+          total += societyFee.fee;
         }
 
-        return this.subtotal * .029 + 30;
+        for (var i = 0; i < this.selectedItems.length; i++) {
+          var key = this.selectedItems[i];
+          var item = _.find(items, { key: key });
+          if (item) {
+            total += item.fee;
+          }
+        }
+
+        return total;
       },
-      forceMembership: function () {
-        return this.selectedItems.length > 0;
+      transactionFee: function () {
+        return BASE_FEE;
       },
       subtotal: function () {
         var total = 0;
 
-        if (this.membership || this.selectedItems.length > 0) {
+        if (this.membership) {
           total += 2000;
         }
 
@@ -248,12 +253,12 @@ function runCart () {
         return total;
       },
       total: function () {
-        return this.subtotal + this.processingFee;
+        return this.subtotal + this.processingFee + this.transactionFee;
       },
     },
     data: {
       items: items,
-      membership: true,
+      membership: false,
       selectedItems: [],
       societyFee: societyFee,
     },
@@ -293,7 +298,7 @@ function runCart () {
         dataType: 'json',
         data: JSON.stringify({
           token: token.id,
-          email: token.email,
+          email: encodeURIComponent(token.email),
           items: items,
         }),
         success: function () {
