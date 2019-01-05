@@ -285,8 +285,9 @@ function runCart () {
   var handler = StripeCheckout.configure({
     key: stripeKey,
     locale: 'auto',
-    name: '2019 Spring Registration Fees',
+    name: '2019 Spring FPS Fees',
     description: 'Foothills Philharmonic Society',
+    billingAddress: true,
     token: function(token) {
       var items = app.selectedItems.slice().concat('fps').map(function (item) {
         return 'SKU_' + item.toUpperCase();
@@ -300,6 +301,7 @@ function runCart () {
           token: token.id,
           email: encodeURIComponent(token.email),
           items: items,
+          name: token.card.name,
         }),
         success: function () {
           window.location = '/thank-you/';
