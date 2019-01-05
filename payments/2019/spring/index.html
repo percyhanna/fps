@@ -290,7 +290,7 @@ function runCart () {
     description: 'Foothills Philharmonic Society',
     billingAddress: true,
     token: function(token) {
-      var items = app.selectedItems.slice().concat('fps').map(function (item) {
+      var items = app.selectedItems.slice().map(function (item) {
         return 'SKU_' + item.toUpperCase();
       });
 
