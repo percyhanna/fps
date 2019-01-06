@@ -294,6 +294,10 @@ function runCart () {
         return 'SKU_' + item.toUpperCase();
       });
 
+      if (app.membership) {
+        items.push('SKU_FPS');
+      }
+
       $.ajax({
         type: 'POST',
         url: apiEndpoint,
