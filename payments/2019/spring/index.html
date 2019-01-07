@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2019 Spring Registration Fees
+title: 2019 Spring Fees
 ---
 
 <script
@@ -21,7 +21,7 @@ title: 2019 Spring Registration Fees
 <div id="app" style="display: none;">
   <div class="row">
     <div class="col col-10 offset-1 col-md-8 offset-md-2">
-      <h1>2019 Spring Registration</h1>
+      <h1>2019 Spring Fees</h1>
 
       <table class="table" style="max-width: 100%;">
         <thead>
@@ -46,7 +46,7 @@ title: 2019 Spring Registration Fees
               <p v-if="item.fee > 0" style="margin-top: 0; color: #888;"><em>+ $${ formatCurrency(item.fee) } processing fee</em></p>
 
               <label class="btn btn-info" style="margin-top: 0.5em;">
-                Register  
+                Select  
 
                 <input
                   type="checkbox"
@@ -72,7 +72,7 @@ title: 2019 Spring Registration Fees
               <p style="margin-top: 0; color: #888;"><em>+ $${ formatCurrency(societyFee.fee) } processing fee</em></p>
 
               <label class="btn btn-info">
-                Register  
+                Select  
 
                 <input type="checkbox" v-model="membership">
               </label>
