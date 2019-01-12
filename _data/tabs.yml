@@ -12,11 +12,18 @@ chamber:
     '/chamber-chorus/': Chamber Chorus
     '/chamber-chorus/repertoire': Past Repertoire
 
+mens_chorus:
+  name: Men’s Chorus
+  tabs:
+    '/mens-chorus/': Men’s Chorus
+    '/mens-chorus/musical-director': Musical Director
+    '/mens-chorus/accompanist': Accompanist
+    '/mens-chorus/repertoire': Past Repertoire
+
 jazz:
   name: Vocal Jazz
   tabs:
     '/vocal-jazz/': Vocal Jazz
-    '/vocal-jazz/accompanist': Accompanist
 
 orchestra:
   name: Orchestra
