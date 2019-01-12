@@ -30,3 +30,4 @@ orchestra:
   tabs:
     '/orchestra/': Orchestra
     '/orchestra/musical-director': Musical Director
+    '/orchestra/repertoire': Past Repertoire

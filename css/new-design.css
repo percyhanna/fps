@@ -550,3 +550,12 @@ blockquote h6 {
   background-color: #4b57a6;
   border-color: #4b57a6;
 }
+
+.nav-photo {
+  margin: -15px;
+  margin-bottom: 0.5rem;
+}
+
+.nav-photo img {
+  max-width: 100%;
+}
