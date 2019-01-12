@@ -27,10 +27,11 @@ opera_chorus:
     '/opera-chorus/musical-director': Musical Director
     '/opera-chorus/repertoire': Past Repertoire
 
-jazz:
+vocal_jazz:
   name: Vocal Jazz
   tabs:
     '/vocal-jazz/': Vocal Jazz
+    '/vocal-jazz/repertoire': Past Repertoire
 
 orchestra:
   name: Orchestra
