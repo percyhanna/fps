@@ -20,6 +20,13 @@ mens_chorus:
     '/mens-chorus/accompanist': Accompanist
     '/mens-chorus/repertoire': Past Repertoire
 
+opera_chorus:
+  name: Opera Chorus
+  tabs:
+    '/opera-chorus/': Opera Chorus
+    '/opera-chorus/musical-director': Musical Director
+    '/opera-chorus/repertoire': Past Repertoire
+
 jazz:
   name: Vocal Jazz
   tabs:
