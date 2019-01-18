@@ -294,6 +294,7 @@ function runCart () {
     name: '2019 Spring FPS Fees',
     description: 'Foothills Philharmonic Society',
     billingAddress: true,
+    currency: 'CAD',
     token: function(token) {
       var items = app.selectedItems.slice().map(function (item) {
         return 'SKU_' + item.toUpperCase();
