@@ -11,7 +11,7 @@
   {% if page.excerpt -%}
   <meta name="og:description" content="{{ page.excerpt | strip_html | lstrip | rstrip | escape_once }}">
   {% else -%}
-  <meta name="og:description" content="{{ page.description }}">
+  <meta name="og:description" content="{{ page.description | strip_html | lstrip | rstrip | escape_once }}">
   {% endif -%}
   <meta name="og:image" content="{{ page.image | absolute_url }}">
 
@@ -22,7 +22,7 @@
   {% if page.excerpt -%}
   <meta name="twitter:description" content="{{ page.excerpt | strip_html | lstrip | rstrip | escape_once }}">
   {% else -%}
-  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:description" content="{{ page.description | strip_html | lstrip | rstrip | escape_once }}">
   {% endif -%}
   <meta name="twitter:image" content="{{ page.image | absolute_url }}">
   <meta name="twitter:url" content="{{ page.url | absolute_url }}">
