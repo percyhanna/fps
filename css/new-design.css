@@ -12,19 +12,39 @@ textarea {
   color: #444444;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Roboto, sans-serif;
   line-height: 1.5em;
   color: #339c5e;
   margin-bottom: 0.5em;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
   color: #339c5e !important;
 }
 
-h1.tight, h2.tight, h3.tight, h4.tight, h5.tight, h6.tight,
-#page .tabs h1, #page .tabs h2, #page .tabs h3, #page .tabs h4, #page .tabs h5, #page .tabs h6 {
+h1.tight,
+h2.tight,
+h3.tight,
+h4.tight,
+h5.tight,
+h6.tight,
+#page .tabs h1,
+#page .tabs h2,
+#page .tabs h3,
+#page .tabs h4,
+#page .tabs h5,
+#page .tabs h6 {
   margin-bottom: 0;
 }
 
@@ -32,25 +52,41 @@ h1.tight, h2.tight, h3.tight, h4.tight, h5.tight, h6.tight,
   border-bottom: none;
 }
 
-h1 { font-size: 30px; }
-h2 { font-size: 24px; }
-h3 { font-size: 22px; }
-h4 { font-size: 20px; }
-h5 { font-size: 19px; }
-h6 { font-size: 18px; }
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 22px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 19px;
+}
+h6 {
+  font-size: 18px;
+}
 
-a, a:hover, a:focus {
+a,
+a:hover,
+a:focus {
   color: #4b57a6;
   text-decoration: none;
 }
 
-strong { font-weight: bold; }
+strong {
+  font-weight: bold;
+}
 
 address {
   border: solid 1px #ccc;
   background: #eee;
   padding: 0.7em;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 body {
@@ -161,7 +197,7 @@ footer a {
 #nav a {
   display: block;
   color: #fff;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   letter-spacing: 0.1em;
   text-decoration: none;
   font-size: 17px;
@@ -172,7 +208,8 @@ footer a {
   cursor: pointer;
 }
 
-#nav ul li a:hover, #nav ul li:hover > a {
+#nav ul li a:hover,
+#nav ul li:hover > a {
   background-color: rgba(51, 156, 94, 0.5);
   color: #fff;
   text-shadow: 1px 1px 1px black;
@@ -207,7 +244,7 @@ footer a {
 }
 
 #fps_carousel h3 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 28px;
   margin: 0;
 }
@@ -270,7 +307,7 @@ footer a {
 
 #social-menu .facebook:hover,
 #social-menu li:hover .facebook {
-  background-color: #3B5998;
+  background-color: #3b5998;
 }
 
 #social-menu .twitter:hover,
@@ -288,7 +325,8 @@ footer a {
   background-color: #cd201f;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi) and (min-width: 768px) {
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+  (min-resolution: 192dpi) and (min-width: 768px) {
   #logo {
     background-image: url(/images/logo-website-top@2x.png);
   }
@@ -448,7 +486,7 @@ img.float-right {
 #slogan h1 {
   margin: 0;
   border: none;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .sponsor-image {
@@ -488,7 +526,7 @@ img.float-right {
 .video-container:after {
   margin-top: 56.25%;
   display: block;
-  content: '';
+  content: "";
 }
 
 .video-container > div {
@@ -525,7 +563,10 @@ aside.box {
   background-color: #4b57a6;
 }
 
-.facebook-button, .facebook-button:hover, .facebook-button:active, .facebook-button:focus {
+.facebook-button,
+.facebook-button:hover,
+.facebook-button:active,
+.facebook-button:focus {
   background-color: #3b5998;
   color: white;
 }
