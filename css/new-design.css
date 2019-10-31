@@ -274,6 +274,10 @@ footer a {
   max-width: 80%;
 }
 
+.content-image.large img {
+  max-width: 95%;
+}
+
 #social-menu {
   margin: 0 0 1em;
   padding: 0;
