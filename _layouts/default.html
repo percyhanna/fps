@@ -6,14 +6,15 @@
   <title>{{ page.title }} – {{ page.title_suffix }}</title>
 
   <!-- facebook open graph tags -->
-  <meta name="og:url" content="{{ page.url | absolute_url }}">
-  <meta name="og:title" content="{{ page.title }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ page.title }}">
   {% if page.excerpt -%}
-  <meta name="og:description" content="{{ page.excerpt | strip_html | lstrip | rstrip | escape_once }}">
+  <meta property="og:description" content="{{ page.excerpt | strip_html | lstrip | rstrip | escape_once }}">
   {% else -%}
-  <meta name="og:description" content="{{ page.description | strip_html | lstrip | rstrip | escape_once }}">
+  <meta property="og:description" content="{{ page.description | strip_html | lstrip | rstrip | escape_once }}">
   {% endif -%}
-  <meta name="og:image" content="{{ page.image | absolute_url }}">
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
 
   <!-- twitter card tags additive with the og: tags -->
   <meta name="twitter:card" content="summary_large_image">
