@@ -12,7 +12,7 @@ defaults:
     scope:
       path: ""
     values:
-      description: "Foothills Philharmonic Society - Bringing beautiful music to the Foothills in Southern Alberta, Canada"
+      description: "Bringing beautiful music to the Foothills in Southern Alberta, Canada"
       title_suffix: 'Foothills Philharmonic Society'
       image: "/images/default-fps-image.jpg"
 
