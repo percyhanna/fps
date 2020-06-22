@@ -1,41 +1,41 @@
 chorus:
   name: Chorus
   tabs:
-    '/chorus/': Chorus
-    '/chorus/musical-director': Musical Director
-    '/chorus/accompanist': Accompanist
-    '/chorus/repertoire': Past Repertoire
+    "/chorus/": Chorus
+    "/chorus/musical-director": Musical Director
+    "/chorus/accompanist": Accompanist
+    "/chorus/repertoire": Past Repertoire
 
 chamber:
   name: Chamber Chorus
   tabs:
-    '/chamber-chorus/': Chamber Chorus
-    '/chamber-chorus/repertoire': Past Repertoire
+    "/chamber-chorus/": Chamber Chorus
+    "/chamber-chorus/repertoire": Past Repertoire
 
 mens_chorus:
   name: Men’s Chorus
   tabs:
-    '/mens-chorus/': Men’s Chorus
-    '/mens-chorus/musical-director': Musical Director
-    '/mens-chorus/accompanist': Accompanist
-    '/mens-chorus/repertoire': Past Repertoire
+    "/mens-chorus/": Men’s Chorus
+    "/mens-chorus/musical-director": Musical Director
+    "/mens-chorus/repertoire": Past Repertoire
 
 opera_chorus:
   name: Opera Chorus
   tabs:
-    '/opera-chorus/': Opera Chorus
-    '/opera-chorus/musical-director': Musical Director
-    '/opera-chorus/repertoire': Past Repertoire
+    "/opera-chorus/": Opera Chorus
+    "/opera-chorus/musical-director": Musical Director
+    "/opera-chorus/repertoire": Past Repertoire
 
 vocal_jazz:
   name: Vocal Jazz
   tabs:
-    '/vocal-jazz/': Vocal Jazz
-    '/vocal-jazz/repertoire': Past Repertoire
+    "/vocal-jazz/": Vocal Jazz
+    "/vocal-jazz/musical-director": Musical Director
+    "/vocal-jazz/repertoire": Past Repertoire
 
 orchestra:
   name: Orchestra
   tabs:
-    '/orchestra/': Orchestra
-    '/orchestra/musical-director': Musical Director
-    '/orchestra/repertoire': Past Repertoire
+    "/orchestra/": Orchestra
+    "/orchestra/musical-director": Musical Director
+    "/orchestra/repertoire": Past Repertoire
