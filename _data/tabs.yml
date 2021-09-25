@@ -10,6 +10,7 @@ chamber:
   name: Chamber Chorus
   tabs:
     "/chamber-chorus/": Chamber Chorus
+    "/chamber-chorus/musical-director": Musical Director
     "/chamber-chorus/repertoire": Past Repertoire
 
 mens_chorus:
