@@ -8,12 +8,11 @@ include:
   - .well-known
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       description: "Bringing beautiful music to the Foothills in Southern Alberta, Canada"
-      title_suffix: 'Foothills Philharmonic Society'
+      title_suffix: "Foothills Philharmonic Society"
       image: "/images/default-fps-image.jpg"
 
 plugins:

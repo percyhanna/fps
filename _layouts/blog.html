@@ -4,9 +4,7 @@ layout: default
 
 <h1 class="blog-title">{{ page.title }}</h1>
 <p class="blog-post-meta">
-  {{ page.date | date_to_long_string }}
-  —
-  {{ page.author }}
+  {{ page.date | date_to_long_string }} — {{ page.author }}
 </p>
 
 {{ content }}

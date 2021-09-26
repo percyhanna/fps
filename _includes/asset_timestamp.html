@@ -1,1 +1,2 @@
-{% for file in site.static_files %}{% if file.path == include.path %}{{ file.modified_time | date: "%s" }}{% endif %}{% endfor %}
+{% for file in site.static_files %}{% if file.path == include.path %}{{
+file.modified_time | date: "%s" }}{% endif %}{% endfor %}

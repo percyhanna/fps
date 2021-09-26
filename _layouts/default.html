@@ -1,144 +1,230 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
-  <title>{{ page.title }} – {{ page.title_suffix }}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no"
+    />
+    <title>{{ page.title }} – {{ page.title_suffix }}</title>
 
-  <!-- facebook open graph tags -->
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ page.title }}">
-  {% if page.excerpt -%}
-  <meta property="og:description" content="{{ page.excerpt | strip_html | lstrip | rstrip | escape_once }}">
-  {% else -%}
-  <meta property="og:description" content="{{ page.description | strip_html | lstrip | rstrip | escape_once }}">
-  {% endif -%}
-  <meta property="og:image" content="{{ page.image | absolute_url }}">
+    <!-- facebook open graph tags -->
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ page.title }}" />
+    {% if page.excerpt -%}
+    <meta
+      property="og:description"
+      content="{{ page.excerpt | strip_html | lstrip | rstrip | escape_once }}"
+    />
+    {% else -%}
+    <meta
+      property="og:description"
+      content="{{ page.description | strip_html | lstrip | rstrip | escape_once }}"
+    />
+    {% endif -%}
+    <meta property="og:image" content="{{ page.image | absolute_url }}" />
 
-  <!-- twitter card tags additive with the og: tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" content="foothillsphilharmonic.com">
-  <meta name="twitter:title" value="{{ page.title }}" />
-  {% if page.excerpt -%}
-  <meta name="twitter:description" content="{{ page.excerpt | strip_html | lstrip | rstrip | escape_once }}">
-  {% else -%}
-  <meta name="twitter:description" content="{{ page.description | strip_html | lstrip | rstrip | escape_once }}">
-  {% endif -%}
-  <meta name="twitter:image" content="{{ page.image | absolute_url }}">
-  <meta name="twitter:url" content="{{ page.url | absolute_url }}">
+    <!-- twitter card tags additive with the og: tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:domain" content="foothillsphilharmonic.com" />
+    <meta name="twitter:title" value="{{ page.title }}" />
+    {% if page.excerpt -%}
+    <meta
+      name="twitter:description"
+      content="{{ page.excerpt | strip_html | lstrip | rstrip | escape_once }}"
+    />
+    {% else -%}
+    <meta
+      name="twitter:description"
+      content="{{ page.description | strip_html | lstrip | rstrip | escape_once }}"
+    />
+    {% endif -%}
+    <meta name="twitter:image" content="{{ page.image | absolute_url }}" />
+    <meta name="twitter:url" content="{{ page.url | absolute_url }}" />
 
-  <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-96x96.png"
+      sizes="96x96"
+    />
 
-  <meta name="robots" content="index,follow">
-  <meta name="description" content="{{ page.description }}">
-  <meta name="keywords" content="Okotoks choir, Alberta choir, foothills choir, high river choir, Okotoks arts, Alberta arts, foothills arts, choir, Okotoks concerts, Alberta concerts, high river concerts, foothills concerts, classical music, Okotoks classical music, Alberta classical music, foothills classical music, high river classical music, fpc, foothills philharmonic, foothills philharmonic chorus, foothills philharmonic society, Okotoks orchestra, Alberta orchestra, foothills orchestra, high river orchestra, Okotoks orchestras, Alberta orchestras">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/new-design.css?{% include asset_timestamp.html path='/css/new-design.css' %}" type="text/css" media="all">
-  <link href='//fonts.googleapis.com/css?family=Roboto|Josefin+Sans' rel='stylesheet' type='text/css'>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</head>
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="{{ page.description }}" />
+    <meta
+      name="keywords"
+      content="Okotoks choir, Alberta choir, foothills choir, high river choir, Okotoks arts, Alberta arts, foothills arts, choir, Okotoks concerts, Alberta concerts, high river concerts, foothills concerts, classical music, Okotoks classical music, Alberta classical music, foothills classical music, high river classical music, fpc, foothills philharmonic, foothills philharmonic chorus, foothills philharmonic society, Okotoks orchestra, Alberta orchestra, foothills orchestra, high river orchestra, Okotoks orchestras, Alberta orchestras"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/new-design.css?{% include asset_timestamp.html path='/css/new-design.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Roboto|Josefin+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body class="{{ page.body_class }}">
-  <header id="banner" role="banner">
-    <div class="container">
-      <div class="row">
+  <body class="{{ page.body_class }}">
+    <header id="banner" role="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-9 col-md-4">
+            <a href="/" id="logo">Foothills Philharmonic</a>
+          </div>
 
-        <div class="col-9 col-md-4">
-          <a href="/" id="logo">Foothills Philharmonic</a>
+          <div class="col-3 col-md-8">
+            <label
+              id="menu_hamburger"
+              class="d-block d-lg-none"
+              for="menu_checkbox"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <input id="menu_checkbox" type="checkbox" />
+
+            <nav id="nav" role="navigation">
+              <ul>
+                <li class="d-block d-sm-none"><a href="/">Home</a></li>
+                <li><a href="/join">Join Us!</a></li>
+                <li><a href="/concerts">Concerts</a></li>
+                <li>
+                  <a>Ensembles</a>
+                  <ul>
+                    <li><a href="/chorus">Chorus</a></li>
+                    <li><a href="/chamber-chorus">Chamber Chorus</a></li>
+                    <li><a href="/mens-chorus">Men’s Chorus</a></li>
+                    <li><a href="/opera-chorus">Opera Chorus</a></li>
+                    <li><a href="/vocal-jazz">Vocal Jazz</a></li>
+                    <li><a href="/orchestra">Orchestra</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/about-us">About</a>
+                  <ul>
+                    <li><a href="/about-us">About the FPS</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/sponsor-us">Sponsor Us</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
+      </div>
+    </header>
 
-        <div class="col-3 col-md-8">
-          <label id="menu_hamburger" class="d-block d-lg-none" for="menu_checkbox">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-          <input id="menu_checkbox" type="checkbox">
+    <div id="page">
+      <div class="container">{{ content }}</div>
+    </div>
 
-          <nav id="nav" role="navigation">
-            <ul>
-              <li class="d-block d-sm-none"><a href="/">Home</a></li>
-              <li><a href="/join">Join Us!</a></li>
-              <li><a href="/concerts">Concerts</a></li>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <h6>Foothills Philharmonic Society</h6>
+
+            <p>© Copyright {{ site.time | date: '%Y' }}</p>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3" style="text-align: center">
+            <ul id="social-menu">
               <li>
-                <a>Ensembles</a>
-                <ul>
-                  <li><a href="/chorus">Chorus</a></li>
-                  <li><a href="/chamber-chorus">Chamber Chorus</a></li>
-                  <li><a href="/mens-chorus">Men’s Chorus</a></li>
-                  <li><a href="/opera-chorus">Opera Chorus</a></li>
-                  <li><a href="/vocal-jazz">Vocal Jazz</a></li>
-                  <li><a href="/orchestra">Orchestra</a></li>
-                </ul>
+                <a
+                  href="https://www.facebook.com/foothillsphilharmonic"
+                  class="facebook"
+                  target="_blank"
+                  ><img src="/images/facebook.png"
+                /></a>
               </li>
               <li>
-                <a href="/about-us">About</a>
-                <ul>
-                  <li><a href="/about-us">About the FPS</a></li>
-                  <li><a href="/contact">Contact Us</a></li>
-                  <li><a href="/sponsor-us">Sponsor Us</a></li>
-                </ul>
+                <a
+                  href="https://twitter.com/FoothillsPhilAB"
+                  class="twitter"
+                  target="_blank"
+                  ><img src="/images/twitter.png"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/FoothillsPhilAB"
+                  class="instagram"
+                  target="_blank"
+                  ><img src="/images/instagram.png"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/user/foothillsphilha"
+                  class="youtube"
+                  target="_blank"
+                  ><img src="/images/youtube.png"
+                /></a>
               </li>
             </ul>
-          </nav>
-        </div>
+          </div>
 
-      </div>
-    </div>
-  </header>
+          <div class="col-6 col-lg-3">
+            <ul>
+              <li><a href="/chorus">Chorus</a></li>
+              <li><a href="/chamber-chorus">Chamber Chorus</a></li>
+              <li><a href="/opera-chorus">Opera Chorus</a></li>
+              <li><a href="/vocal-jazz">Vocal Jazz</a></li>
+              <li><a href="/orchestra">Orchestra</a></li>
+            </ul>
+          </div>
 
-  <div id="page">
-    <div class="container">
-      {{ content }}
-    </div>
-  </div>
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-sm-6 col-lg-3">
-          <h6>Foothills Philharmonic Society</h6>
-
-          <p>© Copyright {{ site.time | date: '%Y' }}</p>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3" style="text-align: center;">
-          <ul id="social-menu">
-            <li><a href="https://www.facebook.com/foothillsphilharmonic" class="facebook" target="_blank"><img src="/images/facebook.png"></a></li>
-            <li><a href="https://twitter.com/FoothillsPhilAB" class="twitter" target="_blank"><img src="/images/twitter.png"></a></li>
-            <li><a href="https://www.instagram.com/FoothillsPhilAB" class="instagram" target="_blank"><img src="/images/instagram.png"></a></li>
-            <li><a href="https://www.youtube.com/user/foothillsphilha" class="youtube" target="_blank"><img src="/images/youtube.png"></a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <ul>
-            <li><a href="/chorus">Chorus</a></li>
-            <li><a href="/chamber-chorus">Chamber Chorus</a></li>
-            <li><a href="/opera-chorus">Opera Chorus</a></li>
-            <li><a href="/vocal-jazz">Vocal Jazz</a></li>
-            <li><a href="/orchestra">Orchestra</a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <ul>
-            <li><a href="/concerts">Concerts</a></li>
-            <li><a href="/join">Join Us!</a></li>
-            <li><a href="/about-us">About Us</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/sponsor-us">Sponsor Us</a></li>
-            <li><a href="/policies">Privacy Policy</a></li>
-          </ul>
+          <div class="col-6 col-lg-3">
+            <ul>
+              <li><a href="/concerts">Concerts</a></li>
+              <li><a href="/join">Join Us!</a></li>
+              <li><a href="/about-us">About Us</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/sponsor-us">Sponsor Us</a></li>
+              <li><a href="/policies">Privacy Policy</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>
