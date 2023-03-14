@@ -40,3 +40,8 @@ orchestra:
     "/orchestra/": Orchestra
     "/orchestra/musical-director": Musical Director
     "/orchestra/repertoire": Past Repertoire
+
+youth_strings:
+  name: Youth Strings
+  tabs:
+    "/youth-strings/": Youth Strings
