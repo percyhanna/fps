@@ -40,3 +40,8 @@ orchestra:
     "/orchestra/": Orchestra
     "/orchestra/musical-director": Musical Director
     "/orchestra/repertoire": Past Repertoire
+
+vox_nova:
+  name: Vox Nova
+  tabs:
+    "/vox-nova/": Vox Nova
