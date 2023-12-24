@@ -13,6 +13,11 @@ chamber:
     "/chamber-chorus/musical-director": Musical Director
     "/chamber-chorus/repertoire": Past Repertoire
 
+junior_singers:
+  name: Junior Singers
+  tabs:
+    "/junior-singers/": Junior Singers
+
 mens_chorus:
   name: Men’s Chorus
   tabs:
