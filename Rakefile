@@ -147,7 +147,7 @@ namespace :concerts do
     next_concert = upcoming_concerts.first
     if next_concert
       concerts_front_matter["description"] = "Upcoming Concerts — #{next_concert["name"]}"
-      concerts_front_matter["image"] = "/images/concerts/#{next_concert["year"] }/#{next_concert["slug"] }/poster.jpg"
+      concerts_front_matter["image"] = "/images/concerts/#{next_concert["year"] }/#{next_concert["slug"] }/banner.jpg"
     end
 
     # Generate concerts listing
@@ -170,7 +170,7 @@ namespace :concerts do
         "layout" => "default",
         "title" => concert["name"],
         "description" => concert["subtitle"],
-        "image" => "/images/concerts/#{concert["year"] }/#{concert["slug"] }/poster.jpg",
+        "image" => "/images/concerts/#{concert["year"] }/#{concert["slug"] }/banner.jpg",
       }
 
       content = [
