@@ -32,8 +32,9 @@
       Tickets are available at the door.
     </p>
 
+    <h5>Tickets:</h5>
+
     <p>
-      <strong>Tickets:</strong><br>
       <ul>
         {% for ticket in include.concert.tickets %}
           <li><strong>{{ ticket.name }}:</strong> {% if ticket.price > 0 %}${{ ticket.price }}{% else %}Free{% endif %}</li>
@@ -44,9 +45,11 @@
     <div class="row">
       {% for concert_date in include.concert.concert_dates %}
       <div class="col-md-6 col-12">
+        <h4 class="tight">{{ site.data.locations[concert_date.location_slug].title }}</h4>
+
         <p>
           <strong
-            >{{ concert_date.date | date: "%A, %B %d, %Y" }}, {{
+            >{{ concert_date.date | date: "%A, %B %-d, %Y" }}, {{
             concert_date.time }}</strong
           >
           <br />

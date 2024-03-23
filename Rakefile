@@ -37,20 +37,9 @@ def read_concert_config(slug)
   read_concerts[slug]
 end
 
-CONCERTS_CONTENT = <<~HTML
-
-{% include concerts-header.html %} {% include concert-details.html
-concert=site.data.concerts.a-new-day %} {% include concerts-footer.html %}
-HTML
-
-default_concerts_front_matter = {
-  "layout" => "default",
-  "title" => "Upcoming Concerts",
-  "description" => "Upcoming Foothills Philharmonic Concerts",
-  "image" => "/images/upcoming-concerts.jpg",
-  "permalink" => "/concerts/",
-  "redirect_from" => ["/tickets"],
-}
+def concert_year(concert)
+  Date.parse(concert["concert_dates"].first).year
+end
 
 namespace :concerts do
   desc "Create a new concert"
@@ -59,7 +48,6 @@ namespace :concerts do
     # raise concerts.inspect
 
     config = {
-      "year" => Date.today.year,
       "tickets" => [
         { "name" => "General admission", "price" => 20 },
         { "name" => "Students & Seniors", "price" => 10 },
@@ -132,6 +120,67 @@ namespace :concerts do
       concert_dates << concert_date
     end
 
+    config["year"] = concert_year(config)
+
     save_concert(slug, config)
+
+    Rake::Task["concerts:generate"].invoke
+  end
+
+  desc "Auto-generate concert listings"
+  task :generate do
+    concerts = read_concerts.values.sort_by { |concert| concert["concert_dates"].min { |concert_date| Date.parse(concert_date["date"]) }["date"] }
+    upcoming_concerts = concerts.filter do |concert|
+      concert["concert_dates"].any? { |concert_date| Date.parse(concert_date["date"]) >= Date.today }
+    end
+
+    concerts_front_matter = {
+      "layout" => "default",
+      "title" => "Upcoming Concerts",
+      "description" => "Upcoming Foothills Philharmonic Concerts",
+      "image" => "/images/upcoming-concerts.jpg",
+      "permalink" => "/concerts/",
+      "redirect_from" => ["/tickets"],
+    }
+
+    # Next concert details
+    next_concert = upcoming_concerts.first
+    if next_concert
+      concerts_front_matter["description"] = "Upcoming Concerts — #{next_concert["name"]}"
+      concerts_front_matter["image"] = "/images/concerts/#{next_concert["year"] }/#{next_concert["slug"] }/poster.jpg"
+    end
+
+    # Generate concerts listing
+    concerts_content = [
+      YAML.dump(concerts_front_matter).chomp,
+      "---",
+      "{% include concerts-header.html %}",
+    ]
+    upcoming_concerts.each do |concert|
+      concerts_content << "{% include concert-details.html concert=site.data.concerts.#{concert["slug"]} %}"
+      concerts_content << "<hr />"
+    end
+    concerts_content << "{% include concerts-footer.html %}"
+
+    File.write("concerts/index.html", concerts_content.join("\n"))
+
+    # Generate landing pages for all concerts
+    concerts.each do |concert|
+      front_matter = {
+        "layout" => "default",
+        "title" => concert["name"],
+        "description" => concert["subtitle"],
+        "image" => "/images/concerts/#{concert["year"] }/#{concert["slug"] }/poster.jpg",
+      }
+
+      content = [
+        YAML.dump(front_matter).chomp,
+        "---",
+        "{% include concert-details.html concert=site.data.concerts.#{concert["slug"]} %}",
+      ]
+
+      FileUtils.mkdir_p("concerts/#{concert["year"]}")
+      File.write("concerts/#{concert["year"]}/#{concert["slug"]}.html", content.join("\n"))
+    end
   end
 end
