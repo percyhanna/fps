@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-md-4 col-12">
+    <p class="content-image large">
+      <a
+        href="{{ include.concert.event_url }}"
+        target="_blank"
+        ><img
+          src="/images/concerts/{{ include.concert.year }}/{{ include.concert.slug }}/poster.jpg"
+          alt="{{ include.concert.name }}"
+        />
+      </a>
+    </p>
+  </div>
+
+  <div class="col-md-8 col-12">
+    <h3 class="tight">
+      <a href="{{ include.concert.event_url }}" target="_blank"
+        >{{ include.concert.name }}
+      </a>
+    </h3>
+
+    <p>
+      <em>{{ include.concert.host }}</em>
+    </p>
+
+    {% for line in include.concert.description %}
+    <p>{{ line }}</p>
+    {% endfor %}
+
+    <p>
+      Online ticket sales will end at midnight the night before the concert.
+      Tickets are available at the door.
+    </p>
+
+    <p>
+      <strong>Tickets:</strong><br>
+      <ul>
+        {% for ticket in include.concert.tickets %}
+          <li><strong>{{ ticket.name }}:</strong> {% if ticket.price > 0 %}${{ ticket.price }}{% else %}Free{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </p>
+
+    <div class="row">
+      {% for concert_date in include.concert.concert_dates %}
+      <div class="col-md-6 col-12">
+        <p>
+          <strong
+            >{{ concert_date.date | date: "%A, %B %d, %Y" }}, {{
+            concert_date.time }}</strong
+          >
+          <br />
+          <a
+            href="{{ site.data.locations[concert_date.location_slug].url }}"
+            target="_blank"
+            >{{ site.data.locations[concert_date.location_slug].name }}</a
+          >
+        </p>
+
+        <p>
+          <a
+            class="link-button"
+            href="{{ concert_date.tickets_url }}"
+            target="_blank"
+          >
+            Buy tickets
+          </a>
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

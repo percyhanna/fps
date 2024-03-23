@@ -1,0 +1,22 @@
+---
+a-new-day:
+  year: 2024
+  slug: a-new-day
+  name: A New Day - A Season of Beginnings and First Steps
+  subtitle: The Foothills Philharmonic Junior Singers proudly present their first
+    standalone concert!
+  host: Junior Singers
+  event_url: https://www.eventbrite.ca/e/a-new-day-a-season-of-beginnings-and-first-steps-tickets-870134655177?aff=oddtdtcreator
+  description: |-
+    The newest addition to the Foothills Philharmonic Society's family of ensembles, the Junior Singers are proud to perform their first standalone concert! Featuring works ranging from nursery rhymes to the stories of our childhoods, from Bach to Disney, the FPJS invites you to join us in taking a big first step in a long journey!
+    Tickets are $10 for general admission. Children 12 and under get in free!
+  tickets:
+  - name: General admission
+    price: 10
+  - name: Children 12 and under
+    price: 0
+  concert_dates:
+  - date: '2024-04-20'
+    time: 3:00pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/a-new-day-a-season-of-beginnings-and-first-steps-tickets-870134655177?aff=oddtdtcreator
