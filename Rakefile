@@ -38,7 +38,7 @@ def read_concert_config(slug)
 end
 
 def concert_year(concert)
-  Date.parse(concert["concert_dates"].first).year
+  Date.parse(concert["concert_dates"].first["date"]).year
 end
 
 namespace :concerts do

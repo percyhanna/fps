@@ -20,3 +20,30 @@ a-new-day:
     time: 3:00pm
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/a-new-day-a-season-of-beginnings-and-first-steps-tickets-870134655177
+
+our-best-to-you:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  slug: our-best-to-you
+  name: Our Best to You
+  subtitle: Celebrating 10 Years of Favourites
+  description: |-
+    Join us to celebrate the last 10 years of the Foothills Philharmonic Society.
+    Tickets are $10 for general admission. Children 12 and under get in free!
+  host: Chorus & Orchestra
+  event_url: https://www.eventbrite.com/cc/our-best-to-you-3284999
+  concert_dates:
+  - date: '2024-05-03'
+    time: 7:30pm
+    location_slug: hruc
+    tickets_url: https://www.eventbrite.ca/e/our-best-to-you-tickets-884677332717
+  - date: '2024-05-04'
+    time: 7:30pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/our-best-to-you-tickets-884683902367
+  year: 2024
