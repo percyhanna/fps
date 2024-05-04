@@ -1,0 +1,55 @@
+<div class="row justify-content-around">
+  <div class="col-12 col-lg-8">
+    <h2 class="tight">
+      <a href="{{ include.season.url }}" target="_blank"
+        >{{ include.season.name }}
+      </a>
+    </h2>
+
+    <p>
+      <em>{{ include.season.group }}</em>
+    </p>
+
+    {% for line in include.season.description %}
+    <p>{{ line }}</p>
+    {% endfor %}
+
+    <h4 class="tight">Rehearsals:</h4>
+    <p>{{ include.season.rehearsals }}</p>
+
+    <h4 class="tight">Location</h4>
+    <p>
+      <a
+        href="{{ site.data.locations[include.season.location_slug].url }}"
+        target="_blank"
+        >{{ site.data.locations[include.season.location_slug].name }}</a
+      >
+    </p>
+
+    <h4 class="tight">Concerts:</h4>
+    {{ include.season.concert_details }}
+
+    <h4 class="tight">Registration</h4>
+    <p>
+      To register, you must first become a member of the Foothills Philharmonic
+      Society. Once you are a member, you can join below.
+    </p>
+
+    <p>
+      <a
+        class="btn btn-primary"
+        href="http://members.footphil.com/join-us"
+        target="_blank"
+      >
+        Become a member
+      </a>
+
+      <a
+        class="btn btn-secondary"
+        href="{{ include.season.url }}"
+        target="_blank"
+        >Join the {{ include.season.group }}
+      </a>
+    </p>
+  </div>
+</div>

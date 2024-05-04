@@ -12,6 +12,10 @@ textarea {
   color: #444444;
 }
 
+p {
+  margin-bottom: 0.5em;
+}
+
 h1,
 h2,
 h3,
@@ -594,6 +598,11 @@ blockquote h6 {
 .btn-primary {
   background-color: #4b57a6;
   border-color: #4b57a6;
+}
+
+.btn-secondary {
+  background-color: #339c5e;
+  border-color: #339c5e;
 }
 
 .nav-photo {
