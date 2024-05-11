@@ -1,7 +1,9 @@
 require "io/console"
 require "date"
 require "yaml"
+require "active_support"
 require "active_support/inflector"
+require "active_support/core_ext"
 
 def multi_gets
   text = ""
@@ -12,20 +14,21 @@ def multi_gets
   text.chomp
 end
 
-DATA_FILE = "_data/concerts.yml"
+CONCERT_DATA_FILE = "_data/concerts.yml"
+SEASON_DATA_FILE = "_data/seasons.yml"
 
 config = nil
 slug = nil
 
 def read_concerts
-  YAML.load(File.read(DATA_FILE))
+  YAML.load(File.read(CONCERT_DATA_FILE), permitted_classes: [Date])
 end
 
 def save_concert(slug, config)
   concerts = read_concerts
   concerts[slug] = config
 
-  File.write(DATA_FILE, YAML.dump(concerts))
+  File.write(CONCERT_DATA_FILE, YAML.dump(concerts))
 end
 
 def read_concert_config(slug)
@@ -178,6 +181,53 @@ namespace :concerts do
 
       FileUtils.mkdir_p("concerts/#{concert["year"]}")
       File.write("concerts/#{concert["year"]}/#{concert["slug"]}.html", content.join("\n"))
+    end
+  end
+end
+
+def read_seasons
+  YAML.load(File.read(SEASON_DATA_FILE), permitted_classes: [Date])
+end
+
+def save_season(slug, config)
+  seasons = read_seasons
+  seasons[slug] = config
+
+  File.write(SEASON_DATA_FILE, YAML.dump(seasons))
+end
+
+def read_season_config(slug)
+  raise "Cannot load season without slug: #{slug.inspect}" unless slug
+
+  read_seasons[slug]
+end
+
+def season_year(season)
+  Date.parse(concert["concert_dates"].first["date"]).year
+end
+
+namespace :seasons do
+  desc "Auto-generate season listings"
+  task :generate do
+    seasons = read_seasons.sort_by { |slug, season| season["first_rehearsal"] }
+    upcoming_seasons = seasons.filter { |slug, season| season["first_rehearsal"] < 1.month.ago }
+
+    # Generate landing pages for all seasons
+    seasons.each do |slug, season|
+      front_matter = {
+        "layout" => "default",
+        "title" => season["name"],
+        "description" => season["subtitle"],
+      }
+
+      content = [
+        YAML.dump(front_matter).chomp,
+        "---",
+        "{% include season-details.html season=site.data.seasons.#{slug} %}",
+      ]
+
+      FileUtils.mkdir_p("join/#{season["year"]}")
+      File.write("join/#{season["year"]}/#{slug}.html", content.join("\n"))
     end
   end
 end
