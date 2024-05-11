@@ -32,8 +32,8 @@ our-best-to-you:
   slug: our-best-to-you
   name: Our Best to You
   subtitle: Celebrating 10 Years of Favourites
-  description: |-
-    Join us to celebrate the last 10 years of the Foothills Philharmonic Society.
+  description: Join us to celebrate the last 10 years of the Foothills Philharmonic
+    Society.
   host: Chorus & Orchestra
   event_url: https://www.eventbrite.com/cc/our-best-to-you-3284999
   concert_dates:
@@ -45,4 +45,28 @@ our-best-to-you:
     time: 7:30pm
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/our-best-to-you-tickets-884683902367
+  year: 2024
+
+songs-to-lift-your-spirits:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: Songs to Lift Your Spirits
+  subtitle: Come and enjoy music that will touch your heart and put a smile on your face
+  description:
+    - Come and enjoy music that will touch your heart and put a smile on your face. Stand by Me, You Raise Me Up, Here Comes the Sun and Joyful, Joyful from Sister Act 2.
+    - Our special guests Rex Panelo and Frank Cho will “Lift Your Spirits” with Frank’s classical guitar accompanying Rex’s beautiful voice.
+    - Don’t miss this night of beautiful music!
+  host: Men’s Chorus and Vocal Jazz
+  event_url: https://www.eventbrite.ca/e/songs-to-lift-your-spirits-tickets-900843044797
+  slug: songs-to-lift-your-spirits
+  concert_dates:
+  - date: '2024-05-25'
+    time: 7:30pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/songs-to-lift-your-spirits-tickets-900843044797
   year: 2024
