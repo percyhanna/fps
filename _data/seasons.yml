@@ -32,7 +32,7 @@ junior-singers-christmas-by-the-fire:
   price: 200
   early_bird: 150
   early_bird_deadline: 2024-08-22
-  location_slug: oac
+  location_slug: grace_lutheran
   url: https://footphil.wildapricot.org/event-5720640/Registration
   email: juniorsingers
   description:
@@ -48,4 +48,33 @@ junior-singers-christmas-by-the-fire:
   concert_details: |
     <ul>
       <li><strong>Concert:</strong> Saturday December 7, 2024, 3:00 pm, Okotoks Alliance Church</li>
+    </ul>
+
+junior-singers-canada-from-eh-to-zed:
+  year: 2025
+  slug: junior-singers-canada-from-eh-to-zed
+  name: Canada from Eh to Zed!
+  group: Junior Singers
+  subtitle: The Spring half of Junior Singers second season will focus on a wide variety of songs that make up Canada's rich musical heritage, with works from sea to sea to sea!
+  first_rehearsal: 2025-01-09
+  price: 200
+  early_bird: 150
+  early_bird_deadline: 2024-12-08
+  location_slug: grace_lutheran
+  url: https://footphil.wildapricot.org/event-5729636/Registration
+  email: juniorsingers
+  description:
+    - The Spring half of Junior Singers second season will focus on a wide variety of songs that make up Canada's rich musical heritage, with works from sea to sea to sea!
+    - The season starts on January 9th, and will include 13 rehearsals, plus performances.
+    - "The Junior Singers will be split up into two age groups:"
+    - |
+      <ul>
+        <li><strong>Prelude:</strong> Ages 6-7 as of December 31, 2024</li>
+        <li><strong>Cantabile:</strong> Ages 8-12 as of December 31, 2024</li>
+      </ul>
+  rehearsals: Thursdays at 5:30-6:30 pm (Prelude), and 6:45-8pm (Cantabile)
+  concert_details: |
+    <ul>
+      <li><strong>Highwood Lions Music Festival:</strong> TBC, usually on a weekday evening in mid-March</li>
+      <li><strong>Concert:</strong> Saturday April 12, 2025, 3:00 pm, Okotoks Alliance Church</li>
     </ul>
