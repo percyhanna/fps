@@ -1,6 +1,7 @@
 require "io/console"
 require "date"
 require "yaml"
+require "active_support/inflector"
 
 def multi_gets
   text = ""
@@ -15,10 +16,6 @@ DATA_FILE = "_data/concerts.yml"
 
 config = nil
 slug = nil
-
-def slugify(str)
-  str.downcase.split(/\s+/).join("-")
-end
 
 def read_concerts
   YAML.load(File.read(DATA_FILE))
@@ -50,13 +47,12 @@ namespace :concerts do
     config = {
       "tickets" => [
         { "name" => "General admission", "price" => 20 },
-        { "name" => "Students & Seniors", "price" => 10 },
+        { "name" => "Students & Seniors", "price" => 15 },
         { "name" => "Children 12 and under", "price" => 0 },
       ],
     }
 
     %w[
-      slug
       name
       subtitle
       description
@@ -73,7 +69,8 @@ namespace :concerts do
         end
     end
 
-    slug = config["slug"] = slugify(config["slug"])
+    config["slug"] ||= config["name"].parameterize
+    slug = config["slug"]
     if concerts.key?(slug)
       config = concerts[slug].merge(config)
     end
