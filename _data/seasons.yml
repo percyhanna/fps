@@ -1,5 +1,7 @@
 ---
-opera-chorus-2024:
+opera-chorus-nabucco:
+  year: 2024
+  slug: opera-chorus-nabucco
   name: Opera Chorus — Nabucco
   group: Opera Chorus
   subtitle: Performing “Nabucco” with the Calgary Concert Opera Company
@@ -7,9 +9,10 @@ opera-chorus-2024:
   price: 10
   location_slug: oac
   url: https://footphil.wildapricot.org/event-5577942/Registration
+  email: chamber-chorus
   description: |-
     'Nabucco' by Giuseppe Verdi, in collaboration with the Calgary Concert Opera Company
-  rehearsals: Sunday afternoons from 2pm-4pm
+  rehearsals: Sundays from 2pm-4pm
   concert_details: |
     <ul>
       <li>Sep 15 - Full cast ehearsal at OAC, time TBD</li>
@@ -17,4 +20,32 @@ opera-chorus-2024:
       <li>Sep 18 - ProArts concert at noon (12:10pm to 12:50pm) - excerpts from Nabucco. Location: Calgary Church of the Redeemer TBC.</li>
       <li>Sep 19 - Performance. Lutheran Church of the Cross.</li>
       <li>Sep 21 - Performance. Polaris Centre.</li>
+    </ul>
+
+junior-singers-christmas-by-the-fire:
+  year: 2024
+  slug: junior-singers-christmas-by-the-fire
+  name: Christmas by the Fire
+  group: Junior Singers
+  subtitle: The Junior Singers' fall season will include a lineup of Christmas and winter-themed music.
+  first_rehearsal: 2024-09-12
+  price: 200
+  early_bird: 150
+  early_bird_deadline: 2024-08-22
+  location_slug: oac
+  url: https://footphil.wildapricot.org/event-5720640/Registration
+  email: juniorsingers
+  description:
+    - The Junior Singers' fall season will continue to build on our hugely successful first season with a lineup of Christmas and winter-themed music, as well as performances that will bring the holiday spirit to the Foothills region!
+    - The season starts on September 12th, and will include 13 rehearsals, plus performances.
+    - "The Junior Singers will be split up into two age groups:"
+    - |
+      <ul>
+        <li><strong>Prelude:</strong> Ages 6-7 as of August 31, 2024</li>
+        <li><strong>Cantabile:</strong> Ages 8-12 as of August 31, 2024</li>
+      </ul>
+  rehearsals: Thursdays at 5:30-6:30 pm (Prelude), and 6:45-8pm (Cantabile)
+  concert_details: |
+    <ul>
+      <li><strong>Concert:</strong> Saturday December 7, 2024, 3:00 pm, Okotoks Alliance Church</li>
     </ul>

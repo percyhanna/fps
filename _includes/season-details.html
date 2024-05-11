@@ -12,10 +12,22 @@
 
     {% for line in include.season.description %}
     <p>{{ line }}</p>
-    {% endfor %}
+    {% endfor %} {% if include.season.email != "" %}
+    <p>
+      For more information, please contact
+      <a href="mailto:{{ include.season.email }}@footphil.com"
+        >{{ include.season.email }}@footphil.com</a
+      >.
+    </p>
+    {% endif %}
 
     <h4 class="tight">Rehearsals:</h4>
-    <p>{{ include.season.rehearsals }}</p>
+    <ul>
+      <li>
+        Starting {{ include.season.first_rehearsal | date: "%b %-d, %Y" }}
+      </li>
+      <li>{{ include.season.rehearsals }}</li>
+    </ul>
 
     <h4 class="tight">Location</h4>
     <p>

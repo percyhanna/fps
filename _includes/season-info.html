@@ -1,6 +1,8 @@
-<div class="col-12 col-lg-5 col-md-6">
+<div class="col-12 col-lg-4 col-md-6">
   <h3 class="tight">
-    <a href="/join/{{ include.slug }}">{{ include.season.name }}</a>
+    <a href="/join/{{ include.season.year }}/{{ include.slug }}"
+      >{{ include.season.name }}</a
+    >
   </h3>
 
   <p>
@@ -10,16 +12,23 @@
   <p>{{ include.season.subtitle }}</p>
 
   <h6 class="tight">Rehearsals:</h6>
-  <p>{{ include.season.rehearsals }}</p>
+  <ul>
+    <li>Starting {{ include.season.first_rehearsal | date: "%b %-d, %Y" }}</li>
+    <li>{{ include.season.rehearsals }}</li>
+  </ul>
 
   <h6 class="tight">Fees:</h6>
   <p>
     ${{ include.season.price }} {%- if include.season.early_bird %}, early bird
-    rate: ${{ include.season.early_bird }} (before {{
-    include.season.early_bird_deadline | date: "%b %d, %Y" }}) {% endif %}
+    rate: ${{ include.season.early_bird }} (by {{
+    include.season.early_bird_deadline | date: "%b %-d, %Y" }}) {% endif %}
   </p>
 
   <p>
-    <a class="btn btn-secondary" href="/join/{{ include.slug }}">More info</a>
+    <a
+      class="btn btn-secondary"
+      href="/join/{{ include.season.year }}/{{ include.slug }}"
+      >More info</a
+    >
   </p>
 </div>

@@ -117,6 +117,10 @@ body {
   min-height: 800px;
 }
 
+#page ul {
+  padding-inline-start: 1.8em;
+}
+
 .page-home #page > .container {
   min-height: initial;
 }

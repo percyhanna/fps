@@ -1,0 +1,3 @@
+{% for season in site.data.seasons %} {% assign season_slug = season[0] %} {%
+assign season_info = season[1] %} {% include season-info.html season=season_info
+slug=season_slug %} {% endfor %}
