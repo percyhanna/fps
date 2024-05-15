@@ -41,6 +41,17 @@
     <h4 class="tight">Concerts:</h4>
     {{ include.season.concert_details }}
 
+    <h6 class="tight">Fees:</h6>
+    <ul>
+      <li><strong>Registration fee:</strong> ${{ include.season.price }}</li>
+      {%- if include.season.early_bird %}
+      <li>
+        <strong>Early bird rate:</strong> ${{ include.season.early_bird }} (by
+        {{ include.season.early_bird_deadline | date: "%b %-d, %Y" }})
+      </li>
+      {% endif %}
+    </ul>
+
     <h4 class="tight">Registration</h4>
     <p>
       To register, you must first become a member of the Foothills Philharmonic
