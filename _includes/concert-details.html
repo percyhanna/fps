@@ -1,22 +1,19 @@
+{% assign current_date = site.time | date: "%Y-%m-%d" %}
+{% assign sales_ended = current_date >= concert_date.date %}
+
 <div class="row">
   <div class="col-md-4 col-12">
     <p class="content-image large">
-      <a
-        href="{{ include.concert.event_url }}"
-        target="_blank"
-        ><img
-          src="/images/concerts/{{ include.concert.year }}/{{ include.concert.slug }}/poster.jpg"
-          alt="{{ include.concert.name }}"
-        />
-      </a>
+      <img
+        src="/images/concerts/{{ include.concert.year }}/{{ include.concert.slug }}/poster.jpg"
+        alt="{{ include.concert.name }}"
+      />
     </p>
   </div>
 
   <div class="col-md-8 col-12">
     <h3 class="tight">
-      <a href="{{ include.concert.event_url }}" target="_blank"
-        >{{ include.concert.name }}
-      </a>
+      {{ include.concert.name }}
     </h3>
 
     <p>
@@ -48,27 +45,32 @@
         <h4 class="tight">{{ site.data.locations[concert_date.location_slug].title }}</h4>
 
         <p>
-          <strong
-            >{{ concert_date.date | date: "%A, %B %-d, %Y" }}, {{
-            concert_date.time }}</strong
-          >
+          <strong>
+            {{ concert_date.date | date: "%A, %B %-d, %Y" }}, {{
+            concert_date.time }}
+          </strong>
           <br />
           <a
             href="{{ site.data.locations[concert_date.location_slug].url }}"
             target="_blank"
-            >{{ site.data.locations[concert_date.location_slug].name }}</a
           >
-        </p>
-
-        <p>
-          <a
-            class="link-button"
-            href="{{ concert_date.tickets_url }}"
-            target="_blank"
-          >
-            Buy tickets
+            {{ site.data.locations[concert_date.location_slug].name }}
           </a>
         </p>
+
+        {% if sales_ended %}
+          <p>Online ticket sales have ended. Tickets are still available at the door!</p>
+        {% else %}
+          <p>
+            <a
+              class="link-button"
+              href="{{ concert_date.tickets_url }}"
+              target="_blank"
+            >
+              Buy tickets
+            </a>
+          </p>
+        {% endif %}
       </div>
       {% endfor %}
     </div>
