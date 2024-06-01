@@ -156,10 +156,16 @@ namespace :concerts do
       "---",
       "{% include concerts-header.html %}",
     ]
-    upcoming_concerts.each do |concert|
-      concerts_content << "{% include concert-details.html concert=site.data.concerts.#{concert["slug"]} %}"
-      concerts_content << "<hr />"
+
+    if upcoming_concerts.size > 0
+      upcoming_concerts.each do |concert|
+        concerts_content << "{% include concert-details.html concert=site.data.concerts.#{concert["slug"]} %}"
+        concerts_content << "<hr />"
+      end
+    else
+      concerts_content << "{% include concerts-empty.html %}"
     end
+
     concerts_content << "{% include concerts-footer.html %}"
 
     File.write("concerts/index.html", concerts_content.join("\n"))
