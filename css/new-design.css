@@ -434,7 +434,7 @@ footer a {
 
 .tabs {
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
   display: flex;
   align-items: flex-end;
 }
