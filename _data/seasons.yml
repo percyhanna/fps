@@ -1,4 +1,44 @@
 ---
+chorus-christmas-2024:
+  year: 2024
+  slug: chorus-christmas-2024
+  name: Christmas Movie Music
+  group: Chorus
+  subtitle: Some Christmas tunes from classic holiday films.
+  first_rehearsal: 2024-09-03
+  price: 100
+  location_slug: oac
+  url: https://footphil.wildapricot.org/event-5819968/Registration
+  email: chorus
+  description:
+    - Join us for some classic Christmas tunes from your favourite holiday films.
+  rehearsals: Tuesdays 7:30 - 9:30
+  concert_details: |
+    <ul>
+      <li><strong>Dress rehearsal:</strong> December 11th, 2024</li>
+      <li><strong>Concert:</strong> December 13/14 in High River and Okotoks</li>
+    </ul>
+
+orchestra-christmas-2024:
+  year: 2024
+  slug: orchestra-christmas-2024
+  name: A Night at the Opera
+  group: Orchestra
+  subtitle: Christmas Favourites
+  first_rehearsal: 2024-09-04
+  price: 60
+  location_slug: oac
+  url: https://footphil.wildapricot.org/event-5819966/Registration
+  email: orchestra
+  description:
+    - A Night at the Opera, Christmas Favourites.
+  rehearsals: Wednesdays 7:30 - 9:30
+  concert_details: |
+    <ul>
+      <li>November 1/2 in High River and Okotoks respectively</li>
+      <li>December 13/14 in High River and Okotoks</li>
+    </ul>
+
 junior-singers-christmas-by-the-fire:
   year: 2024
   slug: junior-singers-christmas-by-the-fire
@@ -26,6 +66,42 @@ junior-singers-christmas-by-the-fire:
     <ul>
       <li><strong>Concert:</strong> Saturday December 7, 2024, 3:00 pm, Okotoks Alliance Church</li>
     </ul>
+
+mens-chorus-christmas-2024:
+  year: 2024
+  slug: mens-chorus-christmas-2024
+  name: Men’s Chorus — Christmas 2024
+  group: Men’s Chorus
+  subtitle: If you want to be part of the beautiful sound of men singing harmony this is your choir!
+  first_rehearsal: 2024-09-16
+  price: 100
+  location_slug: oac
+  url: https://footphil.wildapricot.org/event-5819967/Registration
+  email: info
+  description:
+    - The Men’s Chorus will be singing a mixture of Christmas songs such as You’re a Mean One Mr. Grinch, Rocking Christmas Morning, All is Well. These are a just a few examples.
+    - If you want to be part of the beautiful sound of men singing harmony this is your choir!
+  rehearsals: Mondays at 7:30
+  concert_details:
+    - Our fall season will be singing at Seniors Homes and Hospitals.
+
+vocal-jazz-christmas-2024:
+  year: 2024
+  slug: vocal-jazz-christmas-2024
+  name: Vocal Jazz — Christmas 2024
+  group: Vocal Jazz
+  subtitle: Sing beautiful harmonies and make life-long friends.
+  first_rehearsal: 2024-09-19
+  price: 100
+  location_slug: oac
+  url: https://footphil.wildapricot.org/event-5819964/Registration
+  email: info
+  description:
+    - The Vocal Jazz will be singing at Senior Homes and hospitals this season especially closer to Christmas. Some of the songs we will be learning are Sweet Georgia Brown, Heart-Ache Tonight, and Natural Women as well as Christmas songs.
+    - Sing beautiful harmonies and make life-long friends.
+  rehearsals: Thursdays at 7:30
+  concert_details:
+    - We are planning an open mic night in October (date to be determined) and singing at Seniors homes and hospitals.
 
 junior-singers-canada-from-eh-to-zed:
   year: 2025
