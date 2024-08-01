@@ -29,6 +29,7 @@
       <li>{{ include.season.rehearsals }}</li>
     </ul>
 
+    {% if include.season.location_slug %}
     <h4 class="tight">Location</h4>
     <p>
       <a
@@ -37,6 +38,7 @@
         >{{ site.data.locations[include.season.location_slug].name }}</a
       >
     </p>
+    {% endif %}
 
     <h4 class="tight">Concerts:</h4>
     {{ include.season.concert_details }}

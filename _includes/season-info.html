@@ -15,6 +15,7 @@
   <ul>
     <li>Starting {{ include.season.first_rehearsal | date: "%b %-d, %Y" }}</li>
     <li>{{ include.season.rehearsals }}</li>
+    {% if include.season.location_slug %}
     <li>
       <a
         href="{{ site.data.locations[include.season.location_slug].url }}"
@@ -23,6 +24,7 @@
         {{ site.data.locations[include.season.location_slug].name }}
       </a>
     </li>
+    {% endif %}
   </ul>
 
   <h6 class="tight">Fees:</h6>
