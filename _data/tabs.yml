@@ -33,9 +33,9 @@ opera_chorus:
     "/opera-chorus/repertoire": Past Repertoire
 
 vocal_jazz:
-  name: Vocal Jazz
+  name: Ladies Vocal Jazz
   tabs:
-    "/vocal-jazz/": Vocal Jazz
+    "/vocal-jazz/": Ladies Vocal Jazz
     "/vocal-jazz/musical-director": Musical Director
     "/vocal-jazz/repertoire": Past Repertoire
 
