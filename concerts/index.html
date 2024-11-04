@@ -5,9 +5,13 @@ description: Upcoming Concerts — Christmas by the Fire
 image: "/images/concerts/2024/christmas-by-the-fire/banner.jpg"
 permalink: "/concerts/"
 redirect_from:
-- "/tickets"
+  - "/tickets"
 ---
-{% include concerts-header.html %}
-{% include concert-details.html concert=site.data.concerts.christmas-by-the-fire %}
+
+{% include concerts-header.html %} {% include concert-details.html
+concert=site.data.concerts.christmas-by-the-fire %}
+<hr />
+{% include concert-details.html
+concert=site.data.concerts.acoustic-open-mic-night %}
 <hr />
 {% include concerts-footer.html %}

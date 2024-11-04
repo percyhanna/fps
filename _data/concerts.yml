@@ -101,3 +101,27 @@ christmas-by-the-fire:
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/christmas-by-the-fire-tickets-1072821811919
   year: 2024
+acoustic-open-mic-night:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: Acoustic Open Mic Night
+  subtitle: Love making music? Bring a song to play or sing!
+  description: |-
+    Love listening to music? Enjoy hearing everyone perform in a relaxed night of fun!
+    Come and join the vocal jazz group at their Acoustic Open Mic Night. We’ll be performing a few pieces, and we are excited to hear your performances too!
+    Join us on November 16th at 7:30pm at the Okotoks Alliance Church
+    $10  includes one soft drink and one snack.
+  host: Vocal Jazz
+  event_url: https://www.eventbrite.ca/e/acoustic-open-mic-night-tickets-1072831791769
+  slug: acoustic-open-mic-night
+  concert_dates:
+  - date: '2024-11-16'
+    time: 7:30pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/acoustic-open-mic-night-tickets-1072831791769
+  year: 2024
