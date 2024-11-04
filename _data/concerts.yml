@@ -104,11 +104,7 @@ christmas-by-the-fire:
 acoustic-open-mic-night:
   tickets:
   - name: General admission
-    price: 20
-  - name: Students & Seniors
-    price: 15
-  - name: Children 12 and under
-    price: 0
+    price: 10
   name: Acoustic Open Mic Night
   subtitle: Love making music? Bring a song to play or sing!
   description: |-
