@@ -71,3 +71,30 @@ songs-to-lift-your-spirits:
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/songs-to-lift-your-spirits-tickets-900843044797
   year: 2024
+christmas-by-the-fire:
+  tickets:
+  - name: General admission
+    price: 10
+  - name: Children 12 and under
+    price: 0
+  name: Christmas by the Fire
+  subtitle: 'The Junior Singers invite you to join us for our first Christmas concert! '
+  description: In this time of warm socks, hot chocolate, and falling snow, the Junior
+    Singers invite you to join us at 3:00 on December 7th at Okotoks Alliance Church
+    for our first Christmas concert! From classic tunes like Rudolph the Red-Nosed
+    Reindeer and Carol of the Bells, to modern works like Winter Sleigh Ride and The
+    Snowy Day, come and join us by the fireplace and take in a holiday performance
+    that will take you back to your favourite Christmas memories. We're also pleased
+    to be featuring a special guest performance by the Wild Rose Youth Strings ensembles!
+    Tickets are $10 for General Admission and free for kids 12 and under. With so
+    many songs and strings, this promises to be an afternoon that will leave you feeling
+    cozy and ready for the holidays!
+  host: Junior Singers
+  event_url: https://www.eventbrite.ca/e/christmas-by-the-fire-tickets-1072821811919
+  slug: christmas-by-the-fire
+  concert_dates:
+  - date: '2024-12-07'
+    time: 3pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/christmas-by-the-fire-tickets-1072821811919
+  year: 2024
