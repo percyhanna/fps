@@ -121,3 +121,33 @@ acoustic-open-mic-night:
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/acoustic-open-mic-night-tickets-1072831791769
   year: 2024
+home-for-christmas:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: Home for Christmas
+  subtitle: Join us for a cozy evening of favourite holiday classics!
+  description: The Foothills Philharmonic Orchestra and Chorus invite you to join
+    us for a beautiful evening of seasonal favourites in our “Home for the Holidays”
+    concert. With music from classic movies such as Home Alone, and The Polar express,
+    and timeless holiday standards like Tchaikovsky's The Nutcracker, the evening
+    promises to bring back warm memories of celebrations past. Whether you are already
+    home, or wishing you could be there, we invite you to join our FPS family for
+    an evening sure to evoke feelings of family and home.
+  host: Chorus and Orchestra
+  event_url: https://www.eventbrite.com/cc/home-for-christmas-3807173
+  slug: home-for-christmas
+  concert_dates:
+  - date: '2024-12-13'
+    time: 7pm
+    location_slug: hruc
+    tickets_url: https://www.eventbrite.ca/e/home-for-christmas-high-river-tickets-1074002934689
+  - date: '2024-12-14'
+    time: 7pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/home-for-christmas-okotoks-tickets-1073997709059
+  year: 2024
