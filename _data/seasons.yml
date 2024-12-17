@@ -1,4 +1,24 @@
 ---
+chorus-spring-2025:
+  year: 2025
+  slug: chorus-spring-2025
+  name: Golden Oldies
+  group: Chorus
+  subtitle: Join us in performing hits from of the (16)60s, (17)70s, and (18)80s.
+  first_rehearsal: 2025-01-07
+  price: 100
+  location_slug: oac
+  url: https://footphil.wildapricot.org/event-5988050/Registration
+  email: chorus
+  description:
+    - Join us in performing hits from of the (16)60s, (17)70s, and (18)80s.
+  rehearsals: Tuesdays 7:30 - 9:30
+  concert_details: |
+    <ul>
+      <li><strong>Dress rehearsal:</strong> April 30, 2025</li>
+      <li><strong>Concert:</strong> May 2/3 in High River and Okotoks</li>
+    </ul>
+
 chorus-christmas-2024:
   year: 2024
   slug: chorus-christmas-2024
@@ -17,6 +37,28 @@ chorus-christmas-2024:
     <ul>
       <li><strong>Dress rehearsal:</strong> December 11th, 2024</li>
       <li><strong>Concert:</strong> December 13/14 in High River and Okotoks</li>
+    </ul>
+
+orchestra-spring-2025:
+  year: 2025
+  slug: orchestra-spring-2025
+  name: Night at the Opera & Golden Oldies
+  group: Orchestra
+  subtitle: Favourites from the opera stage, and hits from the 1660s, 1770s, and 1880s.
+  first_rehearsal: 2025-01-08
+  price: 60
+  location_slug: oac
+  url: https://footphil.wildapricot.org/event-5988052/Registration
+  email: orchestra
+  description: |
+    <p>Night at the Opera: Join us in performing favourites from the opera stage. (March 14/15)</p>
+    <p>Golden Oldies: Come perform the hits from the 1660s, 1770s, and 1880s. (May 2/3)</p>
+  rehearsals: Wednesdays 7:30 - 9:30
+  concert_details: |
+    <ul>
+      <li><strong>Night at the Opera Concert:</strong> March 14/15</li>
+      <li><strong>Dress rehearsal:</strong> April 30, 2025</li>
+      <li><strong>Golden Oldies Concert:</strong> May 2/3 in High River and Okotoks</li>
     </ul>
 
 orchestra-christmas-2024:

@@ -1,3 +1,5 @@
-{% for season in site.data.seasons %} {% assign season_slug = season[0] %} {%
-assign season_info = season[1] %} {% include season-info.html season=season_info
-slug=season_slug %} {% endfor %}
+{% assign current_date = site.time | date: "%Y-%m-%d" %} {% for season in
+site.data.seasons %} {% assign season_slug = season[0] %} {% assign season_info
+= season[1] %} {% assign first_rehearsal = season_info.first_rehearsal | date:
+"%Y-%m-%d" %} {% if current_date <= first_rehearsal %} {% include
+season-info.html season=season_info slug=season_slug %} {% endif %} {% endfor %}
