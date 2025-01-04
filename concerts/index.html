@@ -1,17 +1,12 @@
 ---
 layout: default
 title: Upcoming Concerts
-description: Upcoming Concerts — Home for Christmas
-image: "/images/concerts/2024/home-for-christmas/banner.jpg"
+description: Upcoming Foothills Philharmonic Concerts
+image: "/images/upcoming-concerts.jpg"
 permalink: "/concerts/"
 redirect_from:
-  - "/tickets"
+- "/tickets"
 ---
-
-{% include concerts-header.html %} {% include concert-details.html
-concert=site.data.concerts.home-for-christmas %}
-<hr />
-{% include concert-details.html concert=site.data.concerts.christmas-by-the-fire
-%}
-<hr />
+{% include concerts-header.html %}
+{% include concerts-empty.html %}
 {% include concerts-footer.html %}
