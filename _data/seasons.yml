@@ -172,3 +172,38 @@ junior-singers-canada-from-eh-to-zed:
       <li><strong>Highwood Lions Music Festival:</strong> TBC, usually on a weekday evening in mid-March</li>
       <li><strong>Concert:</strong> Saturday April 12, 2025, 3:00 pm, Okotoks Alliance Church</li>
     </ul>
+
+mens-chorus-spring-2025:
+  year: 2025
+  slug: mens-chorus-spring-2025
+  name: Songs We Love to Sing
+  group: Men’s Chorus
+  subtitle: With music from composers such as James Taylor, Abba, Aerosmith, and Stevie Wonder, there is something for everyone.
+  first_rehearsal: 2025-01-06
+  price: 100
+  location_slug: oac
+  url: https://footphil.wildapricot.org/event-6009359/Registration
+  email: info
+  description:
+    - The theme for this season is "Songs We Love to Sing". With music from composers such as James Taylor, Abba, Aerosmith, and Stevie Wonder, there is something for everyone.
+    - If you want to be part of the beautiful sound of men singing harmony this is your choir!
+  rehearsals: Mondays at 7:30
+  concert_details:
+    - May 24, 2025 at Okotoks Alliance Church
+
+vocal-jazz-spring-2025:
+  year: 2025
+  slug: vocal-jazz-spring-2025
+  name: Songs We Love to Sing
+  group: Ladies Vocal Jazz
+  subtitle: With music from composers such as James Taylor, Abba, Aerosmith, and Stevie Wonder, there is something for everyone.
+  first_rehearsal: 2025-01-09
+  price: 100
+  url: https://footphil.wildapricot.org/event-6009320/Registration
+  email: info
+  description:
+    - The Ladies Vocal Jazz will be singing at Senior Homes and hospitals this season especially closer to Spring. Some of the songs we will be learning are Sweet Georgia Brown, Heart-Ache Tonight, and Natural Women as well as Spring songs.
+    - Sing beautiful harmonies and make life-long friends.
+  rehearsals: Thursdays at 7:30
+  concert_details:
+    - May 24, 2025 at Okotoks Alliance Church
