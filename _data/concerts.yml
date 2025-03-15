@@ -213,3 +213,32 @@ open-mic-night:
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/open-mic-night-tickets-1287590500849
   year: 2025
+musical-journeys-stops:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: Musical Journeys & Stops
+  subtitle: From Lisbon, Paris, and Vienna
+  description: 'Come and enjoy the Foothills Philharmonic Orchestra as they perform
+    beautiful and moving music from composers Marcos Portugal, Wolfgang Amadeus Mozart,
+    and Ludwig van Beethoven. Journey with the orchestra as it travels to Lisbon,
+    Paris, and Vienna while showcasing these composer’s amazing talents, and both
+    the innovative and indispensable contributions they each made to the world of
+    music. '
+  host: Orchestra
+  event_url: https://www.eventbrite.com/cc/musical-journeys-stops-4152053
+  slug: musical-journeys-stops
+  concert_dates:
+  - date: '2025-05-02'
+    time: 7:30pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.com/e/musical-journeys-stops-okotoks-tickets-1287603058409
+  - date: '2025-05-03'
+    time: 2:00pm
+    location_slug: hruc
+    tickets_url: https://www.eventbrite.ca/e/musical-journeys-stops-high-river-tickets-1287609597969
+  year: 2025
