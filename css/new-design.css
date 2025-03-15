@@ -506,24 +506,6 @@ img.float-right {
   padding: 1em 0;
 }
 
-.blog-posts {
-  list-style: none;
-  padding: 0;
-}
-
-.blog-title {
-  margin-bottom: 3px;
-}
-
-.blog-post h3 {
-  margin-bottom: 0;
-}
-
-.blog-post-meta {
-  color: #999;
-  font-style: italic;
-}
-
 .video-player {
   float: right;
   margin: 0 0 10px 20px;
