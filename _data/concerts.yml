@@ -151,3 +151,26 @@ home-for-christmas:
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/home-for-christmas-okotoks-tickets-1073997709059
   year: 2024
+songs-we-love-to-sing:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: Songs We Love To Sing
+  subtitle: Get ready for an unforgettable night of music!
+  description: Join us for an electrifying evening with the Foothills Philharmonic
+    Society's Men's Chorus & Women's Vocal Jazz! From the timeless melodies of James
+    Taylor and ABBA to the rock anthems of Aerosmith and the soulful sounds of Stevie
+    Wonder, this concert has something for everyone!
+  host: Men’s Chorus & Ladies Vocal Jazz
+  event_url: https://www.eventbrite.ca/e/songs-we-love-to-sing-tickets-1287554091949
+  slug: songs-we-love-to-sing
+  concert_dates:
+  - date: '2025-04-26'
+    time: 7pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/songs-we-love-to-sing-tickets-1287554091949
+  year: 2025
