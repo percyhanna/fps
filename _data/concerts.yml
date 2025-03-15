@@ -194,3 +194,22 @@ canada-from-eh-to-zed:
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/canada-from-eh-to-zed-tickets-1287574874109
   year: 2025
+open-mic-night:
+  tickets:
+  - name: General admission
+    price: 10
+  name: Open Mic Night
+  subtitle: Acoustic Open Night with Foothills Philharmonic Society's Women's Vocal
+    Jazz
+  description: Come join the FPS Women's Vocal Jazz in an evening of fun and relaxing
+    entertainment. Come listen to others and even perform something yourself! Tickets
+    are $10 and include one soft drink and a snack!
+  host: Vocal Jazz
+  event_url: https://www.eventbrite.ca/e/open-mic-night-tickets-1287590500849
+  slug: open-mic-night
+  concert_dates:
+  - date: '2025-04-12'
+    time: 7:30pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/open-mic-night-tickets-1287590500849
+  year: 2025
