@@ -174,3 +174,23 @@ songs-we-love-to-sing:
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/songs-we-love-to-sing-tickets-1287554091949
   year: 2025
+canada-from-eh-to-zed:
+  tickets:
+  - name: General admission
+    price: 10
+  - name: Children 12 and under
+    price: 0
+  name: Canada From Eh to Zed
+  subtitle: Songs of our Home and Native Land
+  description: The Junior Singers invite you to come on a journey from Sea to Sea
+    to Sea! Join us as we explore the rich musical history that Canada has to offer,
+    with works from all across the country from across the years!
+  host: Junior Singers
+  event_url: https://www.eventbrite.ca/e/canada-from-eh-to-zed-tickets-1287574874109
+  slug: canada-from-eh-to-zed
+  concert_dates:
+  - date: '2025-04-12'
+    time: 3pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/canada-from-eh-to-zed-tickets-1287574874109
+  year: 2025
