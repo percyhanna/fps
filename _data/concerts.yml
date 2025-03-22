@@ -242,3 +242,31 @@ musical-journeys-stops:
     location_slug: hruc
     tickets_url: https://www.eventbrite.ca/e/musical-journeys-stops-high-river-tickets-1287609597969
   year: 2025
+golden-oldies:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: Golden Oldies
+  subtitle: Greatest hits from the world of choral music
+  description: Come join the Foothills Philharmonic Chorus as we journey through the
+    centuries and visit some of music's greatest hits. With musical selections from
+    the 1550s, 1660s, 1770s, along with recent selections from the 1960’s and 2020s,
+    there is sure to be something for everyone. So come along with us and enjoy some
+    of the choral world’s best Golden Oldies.
+  host: Chorus
+  event_url: https://www.eventbrite.com/cc/golden-oldies-4172273
+  slug: golden-oldies
+  concert_dates:
+  - date: '2025-05-16'
+    time: 7:30pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/golden-oldies-friday-okotoks-tickets-1298041851119
+  - date: '2025-05-17'
+    time: 3:00pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/golden-oldies-saturday-matinee-okotoks-tickets-1298049152959
+  year: 2025
