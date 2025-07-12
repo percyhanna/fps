@@ -29,7 +29,6 @@ opera_chorus:
   name: Opera Chorus
   tabs:
     "/opera-chorus/": Opera Chorus
-    "/opera-chorus/musical-director": Musical Director
     "/opera-chorus/repertoire": Past Repertoire
 
 vocal_jazz:
