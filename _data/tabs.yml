@@ -50,3 +50,4 @@ vox_nova:
   name: Vox Nova
   tabs:
     "/vox-nova/": Vox Nova
+    "/vox-nova/musical-director": Musical Director
