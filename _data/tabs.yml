@@ -18,6 +18,7 @@ junior_singers:
   tabs:
     "/junior-singers/": Junior Singers
     "/junior-singers/musical-director": Musical Director
+    "/junior-singers/administrative-director": Administrative Director
 
 mens_chorus:
   name: Men’s Chorus
