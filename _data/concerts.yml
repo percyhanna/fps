@@ -270,3 +270,23 @@ golden-oldies:
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/golden-oldies-saturday-matinee-okotoks-tickets-1298049152959
   year: 2025
+myths-memory-and-melody:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: Myths, Memory, and Melody
+  subtitle: Themes of mythology, remembrance, and musical beauty
+  description: Themes of mythology, remembrance, and musical beauty.
+  host: Chamber Chorus & Orchestra
+  event_url: https://www.eventbrite.ca/e/myths-memory-and-melody-tickets-1813621894909
+  slug: myths-memory-and-melody
+  concert_dates:
+  - date: '2025-10-25'
+    time: 7:30pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/myths-memory-and-melody-tickets-1813621894909
+  year: 2025
