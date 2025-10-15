@@ -44,7 +44,13 @@
       {% for concert_date in include.concert.concert_dates %}
 
         <div class="col-md-6 col-12">
-          <h4 class="tight">{{ site.data.locations[concert_date.location_slug].title }}</h4>
+          <div style="display: flex; flex-direction: row; align-items: baseline; gap: 0.5em;">
+            <h4 class="tight">{{ site.data.locations[concert_date.location_slug].title }}</h4>
+
+            {% if concert_date.subtitle %}
+              <em class="minor right">{{ concert_date.subtitle }}</em>
+            {% endif %}
+          </div>
 
           <p>
             <strong>
