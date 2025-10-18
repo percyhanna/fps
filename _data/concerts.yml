@@ -316,7 +316,7 @@ northern-lights-and-sounds-of-joy:
     subtitle: (Saturday matinée)
     tickets_url: https://www.eventbrite.ca/e/northern-lights-and-sounds-of-joy-saturday-matinee-tickets-1826324839759
   year: 2025
-swing-into-christmas-tickets:
+swing-into-christmas:
   tickets:
   - name: General admission
     price: 20
@@ -331,7 +331,7 @@ swing-into-christmas-tickets:
     - Swing on over for an evening of festive nostalgia with a twist of jazz!
   host: Ladies Vocal Jazz & Men’s Chorus
   event_url: https://www.eventbrite.ca/e/swing-into-christmas-tickets-1840430560349
-  slug: swing-into-christmas-tickets
+  slug: swing-into-christmas
   concert_dates:
   - date: '2025-11-22'
     time: 7:00pm
