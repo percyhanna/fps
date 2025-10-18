@@ -338,3 +338,21 @@ swing-into-christmas:
     location_slug: ouc
     tickets_url: https://www.eventbrite.ca/e/swing-into-christmas-tickets-1840430560349
   year: 2025
+winter-wonderland:
+  tickets:
+  - name: General admission
+    price: 10
+  - name: Children 12 and under
+    price: 0
+  name: Winter Wonderland
+  subtitle: The Magic and Mystery of December
+  description: Come join the Junior Singers as we journey across snowy fields, brave the cold nights, and soar through winter skies! Featuring our special guests the Foothills Philharmonic Ladies' Vocal Jazz and Foothills Philharmonic Men's Chorus, this concert will be sure to warm your hearts!
+  host: Junior Singers
+  event_url: https://www.eventbrite.ca/e/winter-wonderland-tickets-1840480138639
+  slug: winter-wonderland
+  concert_dates:
+  - date: '2025-12-06'
+    time: 3:00pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/winter-wonderland-tickets-1840480138639
+  year: 2025
