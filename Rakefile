@@ -146,8 +146,10 @@ namespace :concerts do
     # Next concert details
     next_concert = upcoming_concerts.first
     if next_concert
+      image_folder = "images/concerts/#{next_concert["year"] }/#{next_concert["slug"] }/"
+
       concerts_front_matter["description"] = "Upcoming Concerts — #{next_concert["name"]}"
-      concerts_front_matter["image"] = "/images/concerts/#{next_concert["year"] }/#{next_concert["slug"] }/banner.jpg"
+      concerts_front_matter["image"] = "/#{image_folder}banner.jpg"
     end
 
     # Generate concerts listing
@@ -172,11 +174,13 @@ namespace :concerts do
 
     # Generate landing pages for all concerts
     concerts.each do |concert|
+      image_folder = "images/concerts/#{concert["year"] }/#{concert["slug"] }/"
+
       front_matter = {
         "layout" => "default",
         "title" => concert["name"],
         "description" => concert["subtitle"],
-        "image" => "/images/concerts/#{concert["year"] }/#{concert["slug"] }/banner.jpg",
+        "image" => "/#{image_folder}banner.jpg",
       }
 
       content = [
@@ -185,6 +189,7 @@ namespace :concerts do
         "{% include concert-details.html concert=site.data.concerts.#{concert["slug"]} %}",
       ]
 
+      FileUtils.mkdir_p(image_folder)
       FileUtils.mkdir_p("concerts/#{concert["year"]}")
       File.write("concerts/#{concert["year"]}/#{concert["slug"]}.html", content.join("\n"))
     end
