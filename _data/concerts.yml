@@ -316,3 +316,25 @@ northern-lights-and-sounds-of-joy:
     subtitle: (Saturday matinée)
     tickets_url: https://www.eventbrite.ca/e/northern-lights-and-sounds-of-joy-saturday-matinee-tickets-1826324839759
   year: 2025
+swing-into-christmas-tickets:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: Swing into Christmas
+  subtitle: A lively collection A lively collection of classic and contemporary Christmas tunes
+  description:
+    - Join the Foothills Philharmonic Society’s Ladies Vocal Jazz Chorus and the Men’s Chorus for a festive celebration inspired by your favourite holiday films. From Frosty the Snowman and Feliz Navidad, to Believe from The Polar Express, enjoy smooth harmonies, jazzy rhythms, and a dash of nostalgia guaranteed to get your toes tapping and your spirits soaring.
+    - Swing on over for an evening of festive nostalgia with a twist of jazz!
+  host: Ladies Vocal Jazz & Men’s Chorus
+  event_url: https://www.eventbrite.ca/e/swing-into-christmas-tickets-1840430560349
+  slug: swing-into-christmas-tickets
+  concert_dates:
+  - date: '2025-11-22'
+    time: 7:00pm
+    location_slug: ouc
+    tickets_url: https://www.eventbrite.ca/e/swing-into-christmas-tickets-1840430560349
+  year: 2025
