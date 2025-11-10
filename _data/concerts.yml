@@ -24,7 +24,7 @@ our-best-to-you:
   tickets:
   - name: General admission
     price: 20
-  - name: Students & Seniors
+  - name: Students & Seniors (65 and up)
     price: 15
   - name: Children 12 and under
     price: 0
@@ -49,7 +49,7 @@ songs-to-lift-your-spirits:
   tickets:
   - name: General admission
     price: 20
-  - name: Students & Seniors
+  - name: Students & Seniors (65 and up)
     price: 15
   - name: Children 12 and under
     price: 0
@@ -125,7 +125,7 @@ home-for-christmas:
   tickets:
   - name: General admission
     price: 20
-  - name: Students & Seniors
+  - name: Students & Seniors (65 and up)
     price: 15
   - name: Children 12 and under
     price: 0
@@ -155,7 +155,7 @@ songs-we-love-to-sing:
   tickets:
   - name: General admission
     price: 20
-  - name: Students & Seniors
+  - name: Students & Seniors (65 and up)
     price: 15
   - name: Children 12 and under
     price: 0
@@ -217,7 +217,7 @@ musical-journeys-stops:
   tickets:
   - name: General admission
     price: 20
-  - name: Students & Seniors
+  - name: Students & Seniors (65 and up)
     price: 15
   - name: Children 12 and under
     price: 0
@@ -246,7 +246,7 @@ golden-oldies:
   tickets:
   - name: General admission
     price: 20
-  - name: Students & Seniors
+  - name: Students & Seniors (65 and up)
     price: 15
   - name: Children 12 and under
     price: 0
@@ -274,7 +274,7 @@ myths-memory-and-melody:
   tickets:
   - name: General admission
     price: 20
-  - name: Students & Seniors
+  - name: Students & Seniors (65 and up)
     price: 15
   - name: Children 12 and under
     price: 0
@@ -294,7 +294,7 @@ northern-lights-and-sounds-of-joy:
   tickets:
   - name: General admission
     price: 20
-  - name: Students & Seniors
+  - name: Students & Seniors (65 and up)
     price: 15
   - name: Children 12 and under
     price: 0
@@ -320,7 +320,7 @@ swing-into-christmas:
   tickets:
   - name: General admission
     price: 20
-  - name: Students & Seniors
+  - name: Students & Seniors (65 and up)
     price: 15
   - name: Children 12 and under
     price: 0
