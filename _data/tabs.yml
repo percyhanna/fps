@@ -44,7 +44,6 @@ orchestra:
   name: Orchestra
   tabs:
     "/orchestra/": Orchestra
-    "/orchestra/musical-director": Musical Director
     "/orchestra/open-chairs": Open Chairs
     "/orchestra/repertoire": Past Repertoire
 
