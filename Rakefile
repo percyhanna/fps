@@ -96,8 +96,10 @@ namespace :concerts do
     concert_dates = config["concert_dates"]
 
     loop do
-      puts "Enter a concert date? (y/N)"
-      break unless STDIN.getch&.downcase == "y"
+      if config["concert_dates"].size > 0
+        puts "Enter a concert date? (y/N)"
+        break unless STDIN.getch&.downcase == "y"
+      end
 
       concert_date = {}
 
