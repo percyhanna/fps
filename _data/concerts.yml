@@ -300,7 +300,12 @@ northern-lights-and-sounds-of-joy:
     price: 0
   name: Northern Lights and Sounds of Joy
   subtitle: A Celebration of Winter, Wonder, and Song
-  description: Experience the magic of the season under the glow of the Northern Lights. This concert weaves together breathtaking music from northern composers—featuring works like Ola Gjeilo’s Tundra and Northern Lights—with festive Christmas selections and stirring orchestral pieces. From shimmering choral harmonies to rich instrumental colours, Northern Lights and Sounds of Joy will lift your spirit and fill you with wonder.
+  description: Experience the magic of the season under the glow of the Northern Lights.
+    This concert weaves together breathtaking music from northern composers—featuring
+    works like Ola Gjeilo’s Tundra and Northern Lights—with festive Christmas selections
+    and stirring orchestral pieces. From shimmering choral harmonies to rich instrumental
+    colours, Northern Lights and Sounds of Joy will lift your spirit and fill you
+    with wonder.
   host: Chorus & Orchestra
   event_url: https://www.eventbrite.com/cc/northern-lights-and-sounds-of-joy-4738363
   slug: northern-lights-and-sounds-of-joy
@@ -308,12 +313,12 @@ northern-lights-and-sounds-of-joy:
   - date: '2025-12-12'
     time: 7:30pm
     location_slug: oac
-    subtitle: (Friday night)
+    subtitle: "(Friday night)"
     tickets_url: https://www.eventbrite.ca/e/northern-lights-and-sounds-of-joy-friday-night-tickets-1826304458799
   - date: '2025-12-13'
     time: 3:00pm
     location_slug: oac
-    subtitle: (Saturday matinée)
+    subtitle: "(Saturday matinée)"
     tickets_url: https://www.eventbrite.ca/e/northern-lights-and-sounds-of-joy-saturday-matinee-tickets-1826324839759
   year: 2025
 swing-into-christmas:
@@ -325,10 +330,15 @@ swing-into-christmas:
   - name: Children 12 and under
     price: 0
   name: Swing into Christmas
-  subtitle: A lively collection A lively collection of classic and contemporary Christmas tunes
+  subtitle: A lively collection A lively collection of classic and contemporary Christmas
+    tunes
   description:
-    - Join the Foothills Philharmonic Society’s Ladies Vocal Jazz Chorus and the Men’s Chorus for a festive celebration inspired by your favourite holiday films. From Frosty the Snowman and Feliz Navidad, to Believe from The Polar Express, enjoy smooth harmonies, jazzy rhythms, and a dash of nostalgia guaranteed to get your toes tapping and your spirits soaring.
-    - Swing on over for an evening of festive nostalgia with a twist of jazz!
+  - Join the Foothills Philharmonic Society’s Ladies Vocal Jazz Chorus and the Men’s
+    Chorus for a festive celebration inspired by your favourite holiday films. From
+    Frosty the Snowman and Feliz Navidad, to Believe from The Polar Express, enjoy
+    smooth harmonies, jazzy rhythms, and a dash of nostalgia guaranteed to get your
+    toes tapping and your spirits soaring.
+  - Swing on over for an evening of festive nostalgia with a twist of jazz!
   host: Ladies Vocal Jazz & Men’s Chorus
   event_url: https://www.eventbrite.ca/e/swing-into-christmas-tickets-1840430560349
   slug: swing-into-christmas
@@ -346,7 +356,10 @@ winter-wonderland:
     price: 0
   name: Winter Wonderland
   subtitle: The Magic and Mystery of December
-  description: Come join the Junior Singers as we journey across snowy fields, brave the cold nights, and soar through winter skies! Featuring our special guests the Foothills Philharmonic Ladies' Vocal Jazz and Foothills Philharmonic Men's Chorus, this concert will be sure to warm your hearts!
+  description: Come join the Junior Singers as we journey across snowy fields, brave
+    the cold nights, and soar through winter skies! Featuring our special guests the
+    Foothills Philharmonic Ladies' Vocal Jazz and Foothills Philharmonic Men's Chorus,
+    this concert will be sure to warm your hearts!
   host: Junior Singers
   event_url: https://www.eventbrite.ca/e/winter-wonderland-tickets-1840480138639
   slug: winter-wonderland
