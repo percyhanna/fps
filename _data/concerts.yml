@@ -369,3 +369,26 @@ winter-wonderland:
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/winter-wonderland-tickets-1840480138639
   year: 2025
+geometry-of-love:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: Geometry of Love
+  subtitle: Come along to listen to the beautiful sounds of our Chamber Chorus and
+    guest.
+  description: |-
+    Come get your heart in tune for Valentine’s Day, by enjoying the beautiful sounds of the chamber chorus, performing the geometry of love – songs about the different forms and shapes that love can take through our lives. We also have a beautiful performance by wonderful local soprano, Jennifer Wolsey.
+    Let your heart be warmed this winter season and enjoy some beautiful music with us!
+  host: Chamber Chorus
+  event_url: https://www.eventbrite.ca/e/geometry-of-love-tickets-1982059207445
+  slug: geometry-of-love
+  concert_dates:
+  - date: '2026-02-07'
+    time: 7:00pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/geometry-of-love-tickets-1982059207445
+  year: 2026
