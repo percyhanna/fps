@@ -392,3 +392,27 @@ geometry-of-love:
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/geometry-of-love-tickets-1982059207445
   year: 2026
+foothills-fantasia:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: Foothills Fantasia
+  subtitle: Annual Fundraising Concert
+  description: "Foothills Philharmonic Society\nJoin us for the Foothills Philharmonic’s
+    annual fundraiser: Foothills Fantasia. This fabulous afternoon concert features
+    our choral ensembles and a silent auction featuring some wonderful items from
+    local businesses and our very talented members. Don’t miss this afternoon of beautiful
+    music! "
+  host: Foothills Philharmonic Society
+  event_url: https://www.eventbrite.ca/e/foothills-fantasia-tickets-1982850461106
+  slug: foothills-fantasia
+  concert_dates:
+  - date: '2026-02-28'
+    time: 3:00pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/foothills-fantasia-tickets-1982850461106
+  year: 2026
