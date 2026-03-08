@@ -416,3 +416,26 @@ foothills-fantasia:
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/foothills-fantasia-tickets-1982850461106
   year: 2026
+songs-you-love-to-hear:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: Songs You Love to Hear
+  subtitle: The FPS Ladies' Vocal Jazz and Men's Chorus are back this spring with
+    popular favourites.
+  description: The FPS Ladies' Vocal Jazz and Men's Chorus are back this spring with
+    popular favourites such as "Landslide, For Good, Boogie Shoes, I Say a Little
+    Prayer, Hey Good Lookin', The Parting Glass and Carry on My Wayward Son.
+  host: Ladies' Vocal Jazz and Men's Chorus
+  event_url: https://www.eventbrite.ca/e/songs-you-love-to-hear-tickets-1984722919680
+  slug: songs-you-love-to-hear
+  concert_dates:
+  - date: '2026-05-23'
+    time: 7:00pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/songs-you-love-to-hear-tickets-1984722919680
+  year: 2026
