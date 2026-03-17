@@ -591,6 +591,28 @@ blockquote h6 {
   border-color: #339c5e;
 }
 
+.alert-badge {
+  display: block;
+  background-color: #4b57a6;
+  color: #fff;
+  padding: 0.75em 1em;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 17px;
+}
+
+.alert-badge a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.alert-badge a:hover {
+  color: #ddd;
+}
+
 .nav-photo {
   margin: -15px;
   margin-bottom: 0.5rem;
