@@ -613,6 +613,10 @@ blockquote h6 {
   color: #ddd;
 }
 
+.img-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 .nav-photo {
   margin: -15px;
   margin-bottom: 0.5rem;
