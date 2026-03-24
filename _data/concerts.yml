@@ -450,7 +450,7 @@ just-wait-an-hour-a-tribute-to-alberta-weather:
   name: 'Just Wait an Hour: A Tribute to Alberta Weather'
   subtitle: Join our Chamber Chorus for a fabulous evening!
   description: 'The FPS is pleased to present ‘Just Wait an Hour: A Tribute to Alberta
-    Weather’ featuring beautiful music from our Chamber Chorus! '
+    Weather’ featuring beautiful music from our Chamber Chorus!'
   host: Chamber Chorus
   event_url: https://www.eventbrite.ca/e/just-wait-an-hour-a-tribute-to-alberta-weather-tickets-1985780513973
   slug: just-wait-an-hour-a-tribute-to-alberta-weather
@@ -459,4 +459,25 @@ just-wait-an-hour-a-tribute-to-alberta-weather:
     time: 7:00pm
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/just-wait-an-hour-a-tribute-to-alberta-weather-tickets-1985780513973
+  year: 2026
+adventure-awaits:
+  tickets:
+  - name: General admission
+    price: 10
+  - name: Children 12 and under
+    price: 0
+  name: Adventure Awaits
+  subtitle: Join both of our Junior Singers ensembles for a wonderful afternoon of
+    adventure!
+  description: 'Our Prelude and Cantabile ensembles are hosting an afternoon concert
+    full of adventures. Whether you want to join some pirates or journey with us on
+    safari, there’s plenty of fun in this concert!'
+  host: Junior Singers
+  event_url: https://www.eventbrite.ca/e/adventure-awaits-tickets-1985781851975
+  slug: adventure-awaits
+  concert_dates:
+  - date: '2026-04-25'
+    time: 3:00pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/adventure-awaits-tickets-1985781851975
   year: 2026
