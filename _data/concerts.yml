@@ -469,9 +469,9 @@ adventure-awaits:
   name: Adventure Awaits
   subtitle: Join both of our Junior Singers ensembles for a wonderful afternoon of
     adventure!
-  description: 'Our Prelude and Cantabile ensembles are hosting an afternoon concert
+  description: Our Prelude and Cantabile ensembles are hosting an afternoon concert
     full of adventures. Whether you want to join some pirates or journey with us on
-    safari, there’s plenty of fun in this concert!'
+    safari, there’s plenty of fun in this concert!
   host: Junior Singers
   event_url: https://www.eventbrite.ca/e/adventure-awaits-tickets-1985781851975
   slug: adventure-awaits
@@ -480,4 +480,30 @@ adventure-awaits:
     time: 3:00pm
     location_slug: oac
     tickets_url: https://www.eventbrite.ca/e/adventure-awaits-tickets-1985781851975
+  year: 2026
+we-can-mend-the-sky-songs-of-hope:
+  tickets:
+  - name: General admission
+    price: 20
+  - name: Students & Seniors
+    price: 15
+  - name: Children 12 and under
+    price: 0
+  name: 'We Can Mend the Sky: Songs of Hope'
+  subtitle: 'Join the FPS Chorus for an afternoon or evening of beautiful music, plus
+    enjoy a Community Art Show! '
+  description: The FPS Chorus presents "We Can Mend the Sky" a concert exploring themes
+    of societal change, conflict and injustice juxtaposed with hope, love and activism.
+  host: Chorus
+  event_url: https://www.eventbrite.com/cc/we-can-mend-the-sky-songs-of-hope-4829394
+  slug: we-can-mend-the-sky-songs-of-hope
+  concert_dates:
+  - date: '2026-05-08'
+    time: 7:30pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/we-can-mend-the-sky-songs-of-hope-friday-evening-tickets-1986169282791
+  - date: '2026-05-09'
+    time: 3:00pm
+    location_slug: oac
+    tickets_url: https://www.eventbrite.ca/e/we-can-mend-the-sky-songs-of-hope-saturday-matinee-tickets-1986169822405
   year: 2026
